@@ -5,7 +5,7 @@ let vanilla = document.getElementById('vanilla');
 let chocolate = document.getElementById('chocolate');
 let strawberry = document.getElementById('strawberry');
 
-// getting input for which frsoting it is
+// getting input for which frosting it is
 let frosting1 = document.getElementById('frosting1');
 let frosting2 = document.getElementById('frosting2');
 let frosting3 = document.getElementById('frosting3');
@@ -14,6 +14,9 @@ let frosting3 = document.getElementById('frosting3');
 let topping1 = document.getElementById('topping1');
 let topping2 = document.getElementById('topping2');
 let topping3 = document.getElementById('topping3');
+
+// use this line to change the cake image
+// document.getElementById("cake").src = "image/wanted_cake.png";
 
 // checking all the buttons for whether they are clicked or not
 btn.addEventListener("click", function () {
@@ -44,21 +47,24 @@ btn.addEventListener("click", function () {
 
 // setting the items in storage for main file
 function setCakeInStorage(arr) {
-    sessionStorage.setItem("cake", arr);
-    location.href = "index.html";
-    location.href = "outro.html";
+    document.getElementById("cake").src = "image/vanilla_cake.png";
+    // sessionStorage.setItem("cake", arr);
+    // location.href = "index.html";
+    // location.href = "outro.html";
 }
 
 function setFrostingInStorage(arr) {
-    sessionStorage.setItem("frosting", arr);
-    location.href = "index.html";
-    location.href = "outro.html";
+    document.getElementById("frosting").src = "image/frosting1.png";
+    // sessionStorage.setItem("frosting", arr);
+    // location.href = "index.html";
+    // location.href = "outro.html";
 }
 
 function setToppingInStorage(arr) {
-    sessionStorage.setItem("topping", arr);
-    location.href = "index.html";
-    location.href = "outro.html";
+    document.getElementById("topping").src = "image/topping1.png";
+    // sessionStorage.setItem("topping", arr);
+    // location.href = "index.html";
+    // location.href = "outro.html";
 }
 
 // to access the item: let var_name = sessionStorage.getItem("item_wanted");
