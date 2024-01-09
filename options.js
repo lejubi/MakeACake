@@ -21,8 +21,7 @@ btn.addEventListener("click", function () {
         setCakeInStorage("chocolate");
     } else if (strawberry.checked) {
         setCakeInStorage("strawberry");
-    }
-    else {
+    } else if (vanilla.checked) {
         // defaults cake to vanilla
         setCakeInStorage("vanilla");
     }
