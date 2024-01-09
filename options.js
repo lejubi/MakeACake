@@ -5,7 +5,7 @@ let vanilla = document.getElementById('vanilla');
 let chocolate = document.getElementById('chocolate');
 let strawberry = document.getElementById('strawberry');
 
-// getting input for which frsoting it is
+// getting input for which frosting it is
 let frosting1 = document.getElementById('frosting1');
 let frosting2 = document.getElementById('frosting2');
 let frosting3 = document.getElementById('frosting3');
@@ -45,9 +45,10 @@ btn.addEventListener("click", function () {
 
 // setting the items in storage for main file
 function setCakeInStorage(arr) {
-    sessionStorage.setItem("cake", arr);
-    location.href = "index.html";
-    location.href = "outro.html";
+    document.getElementById("cake").style = "display: none";
+    // sessionStorage.setItem("cake", arr);
+    // location.href = "index.html";
+    // location.href = "outro.html";
 }
 
 function setFrostingInStorage(arr) {
