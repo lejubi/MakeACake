@@ -1,7 +1,7 @@
 let btn = document.querySelector("button");
 
 // getting input for which cake it is
-let vanilla = document.getElementById('vanilla');
+let vanilla = document.getElementById('flavor');
 let chocolate = document.getElementById('chocolate');
 let strawberry = document.getElementById('strawberry');
 
@@ -15,16 +15,17 @@ let topping1 = document.getElementById('topping1');
 let topping2 = document.getElementById('topping2');
 let topping3 = document.getElementById('topping3');
 
+var cake = document.getElementById("cake");
+
 // checking all the buttons for whether they are clicked or not
-btn.addEventListener("click", function () {
+btn.addEventListener("click", function() {
     if (chocolate.checked) {
         setCakeInStorage("chocolate");
     } else if (strawberry.checked) {
         setCakeInStorage("strawberry");
-    }
-    else {
-        // defaults cake to vanilla
+    } else if (vanilla.checked){
         setCakeInStorage("vanilla");
+        cake.src = "img/vanilla_cake.png";
     }
 
     if (frosting1.checked) {
