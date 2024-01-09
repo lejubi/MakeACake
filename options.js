@@ -15,6 +15,9 @@ let topping1 = document.getElementById('topping1');
 let topping2 = document.getElementById('topping2');
 let topping3 = document.getElementById('topping3');
 
+// use this line to change the cake image
+document.getElementById("cake").src = "image/vanilla_cake.png";
+
 // checking all the buttons for whether they are clicked or not
 btn.addEventListener("click", function () {
     if (chocolate.checked) {
