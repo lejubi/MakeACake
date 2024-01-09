@@ -55,16 +55,17 @@ function setCakeInStorage(arr) {
 }
 
 function setFrostingInStorage(arr) {
-    document.getElementById("cake").src = "image/chocolate_cake.png";
+    document.getElementById("frosting").src = "image/frosting1.png";
     // sessionStorage.setItem("frosting", arr);
     // location.href = "index.html";
     // location.href = "outro.html";
 }
 
 function setToppingInStorage(arr) {
-    sessionStorage.setItem("topping", arr);
-    location.href = "index.html";
-    location.href = "outro.html";
+    document.getElementById("topping").src = "image/topping1.png";
+    // sessionStorage.setItem("topping", arr);
+    // location.href = "index.html";
+    // location.href = "outro.html";
 }
 
 // to access the item: let var_name = sessionStorage.getItem("item_wanted");
