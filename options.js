@@ -62,3 +62,5 @@ function setToppingInStorage(arr) {
     location.href = "index.html";
     location.href = "outro.html";
 }
+
+// to access the item: let var_name = sessionStorage.getItem("item_wanted");
