@@ -48,23 +48,29 @@ btn.addEventListener("click", function() {
 // setting the items in storage for main file
 function setCakeInStorage(img) {
     document.getElementById("cake").src = img;
-    // sessionStorage.setItem("cake", arr);
-    // location.href = "index.html";
-    // location.href = "outro.html";
+    sessionStorage.setItem("cake", arr);
+    location.href = "index.html";
+    location.href = "outro.html";
+
+    console.log("cake change")
 }
 
 function setFrostingInStorage(img) {
     document.getElementById("frosting").src = img;
-    // sessionStorage.setItem("frosting", arr);
-    // location.href = "index.html";
-    // location.href = "outro.html";
+    sessionStorage.setItem("frosting", arr);
+    location.href = "index.html";
+    location.href = "outro.html";
+
+    console.log("frosting change")
 }
 
 function setToppingInStorage(img) {
     document.getElementById("topping").src = img;
-    // sessionStorage.setItem("topping", arr);
-    // location.href = "index.html";
-    // location.href = "outro.html";
+    sessionStorage.setItem("topping", arr);
+    location.href = "index.html";
+    location.href = "outro.html";
+
+    console.log("topping change")
 }
 
 // to access the item: let var_name = sessionStorage.getItem("item_wanted");
