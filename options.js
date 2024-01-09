@@ -16,7 +16,7 @@ let topping2 = document.getElementById('topping2');
 let topping3 = document.getElementById('topping3');
 
 // use this line to change the cake image
-document.getElementById("cake").src = "image/vanilla_cake.png";
+// document.getElementById("cake").src = "image/wanted_cake.png";
 
 // checking all the buttons for whether they are clicked or not
 btn.addEventListener("click", function () {
@@ -48,16 +48,17 @@ btn.addEventListener("click", function () {
 
 // setting the items in storage for main file
 function setCakeInStorage(arr) {
-    document.getElementById("cake").style = "display: none";
+    document.getElementById("cake").src = "image/vanilla_cake.png";
     // sessionStorage.setItem("cake", arr);
     // location.href = "index.html";
     // location.href = "outro.html";
 }
 
 function setFrostingInStorage(arr) {
-    sessionStorage.setItem("frosting", arr);
-    location.href = "index.html";
-    location.href = "outro.html";
+    document.getElementById("cake").src = "image/chocolate_cake.png";
+    // sessionStorage.setItem("frosting", arr);
+    // location.href = "index.html";
+    // location.href = "outro.html";
 }
 
 function setToppingInStorage(arr) {
