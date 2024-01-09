@@ -6,6 +6,19 @@
     <title>Outro</title>
 </head>
 <body>
+    <script>
+        function onClick() {
+            const input = document.getElementById("email");
+            const email = input.value;
+            console.log(email);
+        }
+    </script>
+
     <h1>Share Your Cake!</h1>
+    <label for="email">Email:</label>
+    <input type="text" id="email" name="email">
+    <button type="submit" onclick="getemail()">submit</button>
+    <br>
+    <p><a href=mailto:"junalee515@gmail.com">send</a></p>
 </body>
 </html>

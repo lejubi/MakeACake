@@ -5,7 +5,7 @@ let vanilla = document.getElementById('flavor');
 let chocolate = document.getElementById('chocolate');
 let strawberry = document.getElementById('strawberry');
 
-// getting input for which frsoting it is
+// getting input for which frosting it is
 let frosting1 = document.getElementById('frosting1');
 let frosting2 = document.getElementById('frosting2');
 let frosting3 = document.getElementById('frosting3');
@@ -20,48 +20,51 @@ var cake = document.getElementById("cake");
 // checking all the buttons for whether they are clicked or not
 btn.addEventListener("click", function() {
     if (chocolate.checked) {
-        setCakeInStorage("chocolate");
+        setCakeInStorage("img/chocolate_cake.png");
     } else if (strawberry.checked) {
-        setCakeInStorage("strawberry");
-    } else if (vanilla.checked){
-        setCakeInStorage("vanilla");
-        cake.src = "img/vanilla_cake.png";
+        setCakeInStorage("img/strawberry_cake.png");
+    } else if (vanilla.checked) {
+        setCakeInStorage("img/vanilla_cake.png");
     }
 
+    // change image names later
     if (frosting1.checked) {
-        setFrostingInStorage("frosting1");
+        setFrostingInStorage("img/frosting1.png");
     } else if (frosting2.checked) {
-        setFrostingInStorage("frosting2");
+        setFrostingInStorage("img/frosting2.png");
     } else if (frosting2.checked) {
-        setFrostingInStorage("frosting3");
+        setFrostingInStorage("img/frosting3.png");
     }
 
     if (topping1.checked) {
-        setToppingInStorage("topping1");
+        setToppingInStorage("img/topping1.png");
     } else if (topping2.checked) {
-        setToppingInStorage("topping2");
+        setToppingInStorage("img/topping2.png");
     } else if (topping3.checked) {
-        setToppingInStorage("topping3");
+        setToppingInStorage("img/topping3.png");
     }
 });
 
 // setting the items in storage for main file
-function setCakeInStorage(arr) {
-    sessionStorage.setItem("cake", arr);
-    location.href = "index.html";
-    location.href = "outro.html";
+function setCakeInStorage(img) {
+    document.getElementById("cake").src = img;
+    // sessionStorage.setItem("cake", arr);
+    // location.href = "index.html";
+    // location.href = "outro.html";
 }
 
-function setFrostingInStorage(arr) {
-    sessionStorage.setItem("frosting", arr);
-    location.href = "index.html";
-    location.href = "outro.html";
+function setFrostingInStorage(img) {
+    document.getElementById("frosting").src = img;
+    // sessionStorage.setItem("frosting", arr);
+    // location.href = "index.html";
+    // location.href = "outro.html";
 }
 
-function setToppingInStorage(arr) {
-    sessionStorage.setItem("topping", arr);
-    location.href = "index.html";
-    location.href = "outro.html";
+function setToppingInStorage(img) {
+    document.getElementById("topping").src = img;
+    // sessionStorage.setItem("topping", arr);
+    // location.href = "index.html";
+    // location.href = "outro.html";
 }
 
 // to access the item: let var_name = sessionStorage.getItem("item_wanted");
