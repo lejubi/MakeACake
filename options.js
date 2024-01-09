@@ -22,8 +22,12 @@ btn.addEventListener("click", function () {
     } else if (strawberry.checked) {
         setCakeInStorage("img/strawberry_cake.png");
     } else if (vanilla.checked) {
+<<<<<<< HEAD
+        setCakeInStorage("vanilla");
+=======
         // defaults cake to vanilla
         setCakeInStorage("img/vanilla_cake.png");
+>>>>>>> f931e9407792da32938ee89c02fcd4cd6e5adf96
     }
 
     // change image names later
