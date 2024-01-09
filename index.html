@@ -21,7 +21,7 @@
         </audio>-->
 
         <!-- placeholder items -->
-        <img src="img/placeholder_cake.png" width = "500" id = "cake">
+        <img src="img/placeholder_cake.png" style="width:400px" id = "cake">
 
 
         <!-- FLAVORS -->
@@ -29,9 +29,9 @@
         <h2>Flavors:</h2>
 
         <!-- options -->
-        <input type="radio" id="vanilla" name="flavor">Vanilla</input>
-        <input type="radio" id="chocolate" name="flavor">Chocolate</input>
-        <input type="radio" id="strawberry" name="flavor">Strawberry</input>
+        <input type="radio" id="vanilla" name="flavor" onclick="document.getElementById('cake').src='img/vanilla_cake.png'">Vanilla</input>
+        <input type="radio" id="chocolate" name="flavor" onclick="document.getElementById('cake').src='img/chocolate_cake.png'">Chocolate</input>
+        <input type="radio" id="strawberry" name="flavor" onclick="document.getElementById('cake').src='img/placeholder_cake.png'">Strawberry</input>
         
         <!-- finish button -->
         <button><a href="outro.html">finish --></a></button>
