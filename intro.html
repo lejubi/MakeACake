@@ -9,10 +9,22 @@
             text-decoration: none;
             color: black;
         }
+        .center {
+            margin: 0;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            -ms-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+        }
     </style>
 </head>
 <body>
-    <center><h1 id="title">Welcome to Make a Cake!</h1>
-    <button><a href="index.html">start --></a></button></center>
+    <div class="center">
+        <h1 id="title">Make a Cake!</h1>
+        <center>
+            <button><a href="index.html">start --></a></button>
+        </center>
+    </div>
 </body>
 </html>
