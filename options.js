@@ -33,20 +33,21 @@ btn.addEventListener("click", function () {
 >>>>>>> f931e9407792da32938ee89c02fcd4cd6e5adf96
     }
 
+    // change image names later
     if (frosting1.checked) {
-        setFrostingInStorage("frosting1");
+        setFrostingInStorage("img/frosting1.png");
     } else if (frosting2.checked) {
-        setFrostingInStorage("frosting2");
+        setFrostingInStorage("img/frosting2.png");
     } else if (frosting2.checked) {
-        setFrostingInStorage("frosting3");
+        setFrostingInStorage("img/frosting3.png");
     }
 
     if (topping1.checked) {
-        setToppingInStorage("topping1");
+        setToppingInStorage("img/topping1.png");
     } else if (topping2.checked) {
-        setToppingInStorage("topping2");
+        setToppingInStorage("img/topping2.png");
     } else if (topping3.checked) {
-        setToppingInStorage("topping3");
+        setToppingInStorage("img/topping3.png");
     }
 });
 
@@ -58,15 +59,15 @@ function setCakeInStorage(img) {
     // location.href = "outro.html";
 }
 
-function setFrostingInStorage(arr) {
-    document.getElementById("frosting").src = "img/frosting1.png";
+function setFrostingInStorage(img) {
+    document.getElementById("frosting").src = img;
     // sessionStorage.setItem("frosting", arr);
     // location.href = "index.html";
     // location.href = "outro.html";
 }
 
-function setToppingInStorage(arr) {
-    document.getElementById("topping").src = "img/topping1.png";
+function setToppingInStorage(img) {
+    document.getElementById("topping").src = img;
     // sessionStorage.setItem("topping", arr);
     // location.href = "index.html";
     // location.href = "outro.html";
