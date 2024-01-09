@@ -21,11 +21,16 @@ let topping3 = document.getElementById('topping3');
 // checking all the buttons for whether they are clicked or not
 btn.addEventListener("click", function () {
     if (chocolate.checked) {
-        setCakeInStorage("chocolate");
+        setCakeInStorage("img/chocolate_cake.png");
     } else if (strawberry.checked) {
-        setCakeInStorage("strawberry");
+        setCakeInStorage("img/strawberry_cake.png");
     } else if (vanilla.checked) {
+<<<<<<< HEAD
         setCakeInStorage("vanilla");
+=======
+        // defaults cake to vanilla
+        setCakeInStorage("img/vanilla_cake.png");
+>>>>>>> f931e9407792da32938ee89c02fcd4cd6e5adf96
     }
 
     if (frosting1.checked) {
@@ -46,22 +51,22 @@ btn.addEventListener("click", function () {
 });
 
 // setting the items in storage for main file
-function setCakeInStorage(arr) {
-    document.getElementById("cake").src = "image/vanilla_cake.png";
+function setCakeInStorage(img) {
+    document.getElementById("cake").src = img;
     // sessionStorage.setItem("cake", arr);
     // location.href = "index.html";
     // location.href = "outro.html";
 }
 
 function setFrostingInStorage(arr) {
-    document.getElementById("frosting").src = "image/frosting1.png";
+    document.getElementById("frosting").src = "img/frosting1.png";
     // sessionStorage.setItem("frosting", arr);
     // location.href = "index.html";
     // location.href = "outro.html";
 }
 
 function setToppingInStorage(arr) {
-    document.getElementById("topping").src = "image/topping1.png";
+    document.getElementById("topping").src = "img/topping1.png";
     // sessionStorage.setItem("topping", arr);
     // location.href = "index.html";
     // location.href = "outro.html";
