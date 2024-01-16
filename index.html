@@ -14,8 +14,8 @@
         </audio>-->
 
         <!-- placeholder items -->
-        <img src="img/placeholder_cake.png" class="cake" id="cake">
-
+        <img src="img/placeholder_cake.png" class="cake" id="cake" height="400px">
+        <img class="frosting" id="frosting" height="400px">
 
         <!-- FLAVORS -->
         <!-- label -->
@@ -35,9 +35,9 @@
         <h2>Frosting:</h2>
 
         <!-- options -->
-        <input type="radio" id="frosting1" name="frosting">1</input>
-        <input type="radio" id="frosting2" name="frosting">2</input>
-        <input type="radio" id="frosting3" name="frosting">3</input>
+        <input type="radio" id="frosting1" name="frosting" onclick="document.getElementById('frosting').src='img/frosting1.png'">1</input>
+        <input type="radio" id="frosting2" name="frosting" onclick="document.getElementById('frosting').src='img/frosting2.png'">2</input>
+        <input type="radio" id="frosting3" name="frosting" onclick="document.getElementById('frosting').src='img/frosting3.png'">3</input>
         
         <!-- finish button -->
         <button><a href="outro.html">finish --></a></button>
