@@ -18,6 +18,7 @@ let topping3 = document.getElementById('topping3');
 var cake = document.getElementById("cake");
 
 // checking all the buttons for whether they are clicked or not
+// note: this doesn't work
 btn.addEventListener("click", function() {
     if (chocolate.checked) {
         setCakeInStorage("img/chocolate_cake.png");
