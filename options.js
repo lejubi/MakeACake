@@ -1,7 +1,7 @@
 let btn = document.querySelector("button");
 
 // getting input for which cake it is
-let vanilla = document.getElementById('vanilla');
+let vanilla = document.getElementById('flavor');
 let chocolate = document.getElementById('chocolate');
 let strawberry = document.getElementById('strawberry');
 
@@ -15,22 +15,16 @@ let topping1 = document.getElementById('topping1');
 let topping2 = document.getElementById('topping2');
 let topping3 = document.getElementById('topping3');
 
-// use this line to change the cake image
-// document.getElementById("cake").src = "image/wanted_cake.png";
+var cake = document.getElementById("cake");
 
 // checking all the buttons for whether they are clicked or not
-btn.addEventListener("click", function () {
+btn.addEventListener("click", function() {
     if (chocolate.checked) {
         setCakeInStorage("img/chocolate_cake.png");
     } else if (strawberry.checked) {
         setCakeInStorage("img/strawberry_cake.png");
     } else if (vanilla.checked) {
-<<<<<<< HEAD
-        setCakeInStorage("vanilla");
-=======
-        // defaults cake to vanilla
         setCakeInStorage("img/vanilla_cake.png");
->>>>>>> f931e9407792da32938ee89c02fcd4cd6e5adf96
     }
 
     // change image names later
@@ -54,23 +48,29 @@ btn.addEventListener("click", function () {
 // setting the items in storage for main file
 function setCakeInStorage(img) {
     document.getElementById("cake").src = img;
-    // sessionStorage.setItem("cake", arr);
-    // location.href = "index.html";
-    // location.href = "outro.html";
+    sessionStorage.setItem("cake", arr);
+    location.href = "index.html";
+    location.href = "outro.html";
+
+    console.log("cake change")
 }
 
 function setFrostingInStorage(img) {
     document.getElementById("frosting").src = img;
-    // sessionStorage.setItem("frosting", arr);
-    // location.href = "index.html";
-    // location.href = "outro.html";
+    sessionStorage.setItem("frosting", arr);
+    location.href = "index.html";
+    location.href = "outro.html";
+
+    console.log("frosting change")
 }
 
 function setToppingInStorage(img) {
     document.getElementById("topping").src = img;
-    // sessionStorage.setItem("topping", arr);
-    // location.href = "index.html";
-    // location.href = "outro.html";
+    sessionStorage.setItem("topping", arr);
+    location.href = "index.html";
+    location.href = "outro.html";
+
+    console.log("topping change")
 }
 
 // to access the item: let var_name = sessionStorage.getItem("item_wanted");

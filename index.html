@@ -3,15 +3,8 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="style/game.css">
+        <link rel="stylesheet" href="style/styles.css">
         <title>Make A Cake</title>
-        <style>
-            a {
-                text-decoration: none;
-                color: black;
-            }
-        </style>
-        
     </head>
     <body>
         <h1>~ Make A Cake ~</h1>
@@ -21,9 +14,7 @@
         </audio>-->
 
         <!-- placeholder items -->
-        <img src="img/placeholder_cake.png" alt="" width = "500" id = "cake">
-        <img src="img/placeholder_frosting.png" alt="" width = "500" id = "frosting">
-        <img src="img/placeholder_topping.png" alt="" width = "500" id = "topping">
+        <img src="img/placeholder_cake.png" class="cake" id="cake">
 
 
         <!-- FLAVORS -->
@@ -31,18 +22,9 @@
         <h2>Flavors:</h2>
 
         <!-- options -->
-        <input type="radio" id="vanilla" name="flavor">Vanilla</input>
-        <input type="radio" id="chocolate" name="flavor">Chocolate</input>
-        <input type="radio" id="strawberry" name="flavor">Strawberry</input>
-        
-
-<<<<<<< HEAD
-        <img src="img/vanilla_cake.png" id = "vanilla" style = "display: none">
-=======
-        <img src="img/vanilla_cake.png" id = "vanillacake" style="display: none;">
-        <img src="img/chocolate_cake.png" id = "vanillacake" style="display: none;">
-        <img src="img/strawberry_cake.png" id = "vanillacake" style="display: none;">
->>>>>>> 79ab00d2ccf719362ce8ec9e63d64fff4ebd7feb
+        <input type="radio" id="vanilla" name="flavor" onclick="document.getElementById('cake').src='img/vanilla_cake.png'">Vanilla</input>
+        <input type="radio" id="chocolate" name="flavor" onclick="document.getElementById('cake').src='img/chocolate_cake.png'">Chocolate</input>
+        <input type="radio" id="strawberry" name="flavor" onclick="document.getElementById('cake').src='img/strawberry_cake.png'">Strawberry</input>
         
         <!-- finish button -->
         <button><a href="outro.html">finish --></a></button>
