@@ -48,7 +48,6 @@ btn.addEventListener("click", function() {
 // setting the items in storage for main file
 function setCakeInStorage(img) {
     document.getElementById("cake").src = img;
-    document.getElementById('cake').style.height = "1px";
     sessionStorage.setItem("cake", arr);
     location.href = "index.html";
     location.href = "outro.html";
