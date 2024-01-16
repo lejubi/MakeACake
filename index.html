@@ -3,15 +3,8 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="style/game.css">
+        <link rel="stylesheet" href="style/styles.css">
         <title>Make A Cake</title>
-        <style>
-            a {
-                text-decoration: none;
-                color: black;
-            }
-        </style>
-        
     </head>
     <body>
         <h1>~ Make A Cake ~</h1>
@@ -21,7 +14,7 @@
         </audio>-->
 
         <!-- placeholder items -->
-        <img src="img/placeholder_cake.png" style="width:400px" id = "cake">
+        <img src="img/placeholder_cake.png" class="cake" id="cake">
 
 
         <!-- FLAVORS -->
@@ -31,7 +24,7 @@
         <!-- options -->
         <input type="radio" id="vanilla" name="flavor" onclick="document.getElementById('cake').src='img/vanilla_cake.png'">Vanilla</input>
         <input type="radio" id="chocolate" name="flavor" onclick="document.getElementById('cake').src='img/chocolate_cake.png'">Chocolate</input>
-        <input type="radio" id="strawberry" name="flavor" onclick="document.getElementById('cake').src='img/placeholder_cake.png'">Strawberry</input>
+        <input type="radio" id="strawberry" name="flavor" onclick="document.getElementById('cake').src='img/strawberry_cake.png'">Strawberry</input>
         
         <!-- finish button -->
         <button><a href="outro.html">finish --></a></button>

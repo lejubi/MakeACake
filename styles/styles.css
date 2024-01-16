@@ -1,0 +1,21 @@
+a {
+    text-decoration: none;
+    color: black;
+}
+
+img {
+    width: 400px;
+    height: auto;
+}
+
+img.cake {
+    z-index: 1;
+}
+
+img.frosting {
+    z-index: 2;
+}
+
+img.topping {
+    z-index: 3;
+}
