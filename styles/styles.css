@@ -4,7 +4,7 @@ a {
 }
 
 * {
-    font-family: ;
+    font-family: 'Inconsolata', monospace;
 }
 
 h1 {
@@ -16,18 +16,26 @@ h2 {
 }
 
 img {
+    position: fixed;
+    height: 400px;
     width: 400px;
-    height: auto;
+    margin-top: 300px;
 }
 
-img.cake {
+.cake {
     z-index: 1;
+    top: 0;
+    left: 0;
 }
 
-img.frosting {
+.frosting {
     z-index: 2;
+    top: 0;
+    left: 0;
 }
 
-img.topping {
+.topping {
     z-index: 3;
+    top: 0;
+    left: 0;
 }

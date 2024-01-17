@@ -3,8 +3,11 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="style/styles.css">
+        <link rel="stylesheet" href="styles/styles.css">
         <title>Make A Cake</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inconsolata&display=swap" rel="stylesheet">
     </head>
     <body>
         <h1>~ Make A Cake ~</h1>
@@ -14,8 +17,9 @@
         </audio>-->
 
         <!-- placeholder items -->
-        <img src="img/placeholder_cake.png" class="cake" id="cake" height="400px">
-        <img class="frosting" id="frosting" height="400px">
+        <div class="cake"><img src="img/vanilla_cake.png" id="cake"></div>
+        <div class="frosting"><img src="img/nothing.png" id="frosting"></div>
+        <div class="topping"><img src="img/nothing.png" id="topping"></div>
 
         <!-- FLAVORS -->
         <!-- label -->
@@ -48,9 +52,11 @@
         <h2>Toppings:</h2>
 
         <!-- options -->
-        <input type="radio" id="topping1" name="topping">1</input>
-        <input type="radio" id="topping2" name="topping">2</input>
-        <input type="radio" id="topping3" name="topping">3</input>
+        <input type="radio" id="topping1" name="topping" onclick="document.getElementById('topping').src='img/topping1.png'">1</input>
+        <input type="radio" id="topping2" name="topping" onclick="document.getElementById('topping').src='img/topping1.png'">2</input>
+        <input type="radio" id="topping3" name="topping" onclick="document.getElementById('topping').src='img/topping1.png'">3</input>
+        <input type="radio" id="topping4" name="topping" onclick="document.getElementById('topping').src='img/topping1.png'">4</input>
+        <input type="radio" id="topping5" name="topping" onclick="document.getElementById('topping').src='img/topping1.png'">5</input>
         
         <!-- finish button -->
         <button><a href="outro.html">finish --></a></button>
