@@ -15,10 +15,12 @@
         function getEmail() {
             var input = document.getElementById("email");
             var email = input.value;
-            console.log(email);
+            console.log("hi");
+            sendEmail();
         }
         function sendEmail() {
-            window.open("mailto:" + email + "?subject=i%20made%20you%20a%20cake!!&body=pretend%20theres%20a%20cake");
+            // window.open("mailto:" + email + "?subject=i%20made%20you%20a%20cake!!&body=pretend%20theres%20a%20cake");
+            window.open("mailto:" + email + "?subject=i%20made%20you%20a%20cake!!");
         }
     </script>
 
@@ -29,10 +31,11 @@
     <br>
     <a href="mailto:" + email + "?subject=i%20made%20you%20a%20cake!!&body=pretend%20theres an image of a cake">Send mail!</a> -->
 
-    <form action="/sendEmail" method="post">
+    <!-- <form action="/sendEmail" method="post"> -->
+    <form autocomplete = "on">
         <label for="email">Email: </label>
-        <input type="text" name="email">
-        <input type="submit" onclick = getEmail()>
+        <input type="text" name="email" id="email">
+        <input type="submit" onclick = getEmail>
     </form>
 
 </body>
