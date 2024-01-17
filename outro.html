@@ -20,7 +20,8 @@
         }
         function sendEmail() {
             // window.open("mailto:" + email + "?subject=i%20made%20you%20a%20cake!!&body=pretend%20theres%20a%20cake");
-            window.open("mailto:" + email + "?subject=i%20made%20you%20a%20cake!!");
+            // window.open("mailto:" + email + "?subject=i%20made%20you%20a%20cake!!");
+            window.location.href = "mailto:" + email + "?subject=i%20made%20you%20a%20cake!!";
         }
     </script>
 
@@ -32,10 +33,13 @@
     <a href="mailto:" + email + "?subject=i%20made%20you%20a%20cake!!&body=pretend%20theres an image of a cake">Send mail!</a> -->
 
     <!-- <form action="/sendEmail" method="post"> -->
-    <form autocomplete = "on">
+    <form autocomplete = "on" 
+    method="POST"
+    enctype="text/plain"
+    name="EmailForm">
         <label for="email">Email: </label>
         <input type="text" name="email" id="email">
-        <input type="submit" onclick = getEmail>
+        <button name="submit" id="submit" onclick = getEmail()>submit</button>
     </form>
 
 </body>
