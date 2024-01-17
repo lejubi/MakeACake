@@ -8,19 +8,28 @@
 </head>
 <body>
     <script>
-        function onClick() {
-            const input = document.getElementById("email");
-            const email = input.value;
+        function getEmail() {
+            var input = document.getElementById("email");
+            var email = input.value;
             console.log(email);
+        }
+        function sendEmail() {
+            window.open("mailto:" + email + "?subject=i%20made%20you%20a%20cake!!&body=pretend%20theres%20a%20cake");
         }
     </script>
 
     <h1>Share Your Cake!</h1>
-    <label for="email">Email:</label>
+    <!-- <label for="email">Email:</label>
     <input type="text" id="email" name="email">
-    <button type="submit" onclick="getemail()">submit</button>
+    <button type="submit" onclick="getEmail()">submit</button>
     <br>
-    <a href="mailto:" + email + "?subject=i%20made%20you%20a%20cake!!&body=pretend%20theres an image of a cake" target="_top">Send mail!</a>
+    <a href="mailto:" + email + "?subject=i%20made%20you%20a%20cake!!&body=pretend%20theres an image of a cake">Send mail!</a> -->
+
+    <form action="/sendEmail" method="post">
+        <label for="email">Email: </label>
+        <input type="text" name="email">
+        <input type="submit" onclick = getEmail()>
+    </form>
 
 </body>
 </html>
