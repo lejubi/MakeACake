@@ -14,6 +14,8 @@ let frosting3 = document.getElementById('frosting3');
 let topping1 = document.getElementById('topping1');
 let topping2 = document.getElementById('topping2');
 let topping3 = document.getElementById('topping3');
+let topping4 = document.getElementById('topping4');
+let topping5 = document.getElementById('topping5');
 
 var cake = document.getElementById("cake");
 
