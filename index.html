@@ -22,7 +22,19 @@
         <div class="topping"><img src="img/nothing.png" id="topping"></div>
 
         <!-- button for background change -->
-        <button type="button" onclick="body.style='background-color:#f3e5eb'">Change Background</button>
+        <button type="button" onclick="changeBg()">Change Background</button>
+
+        <script>
+            function changeBg() {
+                document.body.style.backgroundImage = "url('img/bg1.png')";
+                // if (document.body.style.backgroundImage = "url('img/bg1.png')") {
+                //     document.body.style.backgroundImage = "url('img/bg2.png')";
+                // }
+                // else if (document.body.style.backgroundImage = "url('img/bg2.png')") {
+                //     document.body.style.backgroundImage = "url('img/bg1')";
+                // }
+            }
+        </script>
 
         <!-- FLAVORS -->
         <!-- label -->
