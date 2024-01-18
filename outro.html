@@ -11,7 +11,10 @@
 
 </head>
 <body>
-    <script src = "changebg.js">
+    <script src = "changebg.js" type = "text/javascript"></script>
+    <script>
+        bg--;
+        changeBg();
         function getEmail() {
             var input = document.getElementById("email");
             const email = input.value;
@@ -24,8 +27,6 @@
             // window.open("mailto:" + email + "?subject=i%20made%20you%20a%20cake!!");
             window.location.href = "mailto:" + emailinput + "?subject=i%20made%20you%20a%20cake!!";
         }
-        bg--;
-        changeBg();
     </script>
 
     <h1>Share Your Cake!</h1>
