@@ -26,18 +26,13 @@
 
         <script>
             let bg = 0;
+            const bgimgs = ["", "url('img/bg1.png')", "url('img/bg2.png')"]
             function changeBg() {
                 bg++;
-                if (bg == 1) {
-                    document.body.style.backgroundImage = "url('img/bg1.png')";
-                }
-                if (bg == 2) {
-                    document.body.style.backgroundImage = "url('img/bg2.png')";
-                }
-                else if (bg == 3) {
+                if (bg >= bgimgs.length) {
                     bg = 0;
-                    document.body.style.backgroundImage = "url('img/bg1')";
                 }
+                document.body.style.backgroundImage = bgimgs[bg];
             }
         </script>
 
