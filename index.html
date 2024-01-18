@@ -25,14 +25,19 @@
         <button type="button" onclick="changeBg()">Change Background</button>
 
         <script>
+            let bg = 0;
             function changeBg() {
-                document.body.style.backgroundImage = "url('img/bg1.png')";
-                // if (document.body.style.backgroundImage = "url('img/bg1.png')") {
-                //     document.body.style.backgroundImage = "url('img/bg2.png')";
-                // }
-                // else if (document.body.style.backgroundImage = "url('img/bg2.png')") {
-                //     document.body.style.backgroundImage = "url('img/bg1')";
-                // }
+                bg++;
+                if (bg == 1) {
+                    document.body.style.backgroundImage = "url('img/bg1.png')";
+                }
+                if (bg == 2) {
+                    document.body.style.backgroundImage = "url('img/bg2.png')";
+                }
+                else if (bg == 3) {
+                    bg = 0;
+                    document.body.style.backgroundImage = "url('img/bg1')";
+                }
             }
         </script>
 
@@ -44,29 +49,23 @@
         <input type="radio" id="vanilla" name="flavor" onclick="document.getElementById('cake').src='img/vanilla_cake.png'">Vanilla</input>
         <input type="radio" id="chocolate" name="flavor" onclick="document.getElementById('cake').src='img/chocolate_cake.png'">Chocolate</input>
         <input type="radio" id="strawberry" name="flavor" onclick="document.getElementById('cake').src='img/strawberry_cake.png'">Strawberry</input>
-        
-        <!-- finish button -->
-        <button><a href="outro.html">finish --></a></button>
-
-
+    
         <!-- FROSTING -->
         <!-- label -->
         <h2>Frosting:</h2>
 
         <!-- options -->
+        <input type="radio" id="frosting0" name="frosting" onclick="document.getElementById('frosting').src='img/nothing.png'">None</input>
         <input type="radio" id="frosting1" name="frosting" onclick="document.getElementById('frosting').src='img/frosting1.png'">1</input>
         <input type="radio" id="frosting2" name="frosting" onclick="document.getElementById('frosting').src='img/frosting2.png'">2</input>
         <input type="radio" id="frosting3" name="frosting" onclick="document.getElementById('frosting').src='img/frosting3.png'">3</input>
-        
-        <!-- finish button -->
-        <button><a href="outro.html">finish --></a></button>
-
         
         <!-- TOPPINGS -->
         <!-- label -->
         <h2>Toppings:</h2>
 
         <!-- options -->
+        <input type="radio" id="topping0" name="topping" onclick="document.getElementById('topping').src='img/nothing.png'">None</input>
         <input type="radio" id="topping1" name="topping" onclick="document.getElementById('topping').src='img/topping1.png'">1</input>
         <input type="radio" id="topping2" name="topping" onclick="document.getElementById('topping').src='img/topping2.png'">2</input>
         <input type="radio" id="topping3" name="topping" onclick="document.getElementById('topping').src='img/topping3.png'">3</input>
