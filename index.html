@@ -24,22 +24,7 @@
         <!-- button for background change -->
         <button type="button" onclick="changeBg()">Change Background</button>
 
-        <script>
-            let bg = 0;
-            function changeBg() {
-                bg++;
-                if (bg == 1) {
-                    document.body.style.backgroundImage = "url('img/bg1.png')";
-                }
-                if (bg == 2) {
-                    document.body.style.backgroundImage = "url('img/bg2.png')";
-                }
-                else if (bg == 3) {
-                    bg = 0;
-                    document.body.style.backgroundImage = "url('img/bg1')";
-                }
-            }
-        </script>
+        <script src="changebg.js"></script>
 
         <!-- FLAVORS -->
         <!-- label -->
