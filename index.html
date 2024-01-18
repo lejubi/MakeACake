@@ -17,10 +17,14 @@
         </audio>-->
 
         <!-- placeholder items -->
+        <script>
+            var cakeChoice = 1;
+            var frostingChoice = 0;
+            var toppingChoice = 0;
+        </script>
         <div class="cake"><img src="img/vanilla_cake.png" id="cake"></div>
         <div class="frosting"><img src="img/nothing.png" id="frosting"></div>
         <div class="topping"><img src="img/nothing.png" id="topping"></div>
-
         <!-- button for background change -->
         <button type="button" onclick="changeBg()">Change Background</button>
 
@@ -31,9 +35,9 @@
         <h2>Flavors:</h2>
 
         <!-- options -->
-        <input type="radio" id="vanilla" name="flavor" onclick="document.getElementById('cake').src='img/vanilla_cake.png'">Vanilla</input>
-        <input type="radio" id="chocolate" name="flavor" onclick="document.getElementById('cake').src='img/chocolate_cake.png'">Chocolate</input>
-        <input type="radio" id="strawberry" name="flavor" onclick="document.getElementById('cake').src='img/strawberry_cake.png'">Strawberry</input>
+        <input type="radio" id="vanilla" name="flavor" onclick="document.getElementById('cake').src='img/vanilla_cake.png'; cakeChoice = 1">Vanilla</input>
+        <input type="radio" id="chocolate" name="flavor" onclick="document.getElementById('cake').src='img/chocolate_cake.png'; cakeChoice = 2">Chocolate</input>
+        <input type="radio" id="strawberry" name="flavor" onclick="document.getElementById('cake').src='img/strawberry_cake.png'; cakeChoice = 3">Strawberry</input>
     
         <!-- FROSTING -->
         <!-- label -->
@@ -60,7 +64,5 @@
         <!-- finish button -->
         <button><a href="outro.html">finish --></a></button>
 
-        <!-- Using the options.js script for the input -->
-        <script src="options.js"></script>
     </body>
 </html>

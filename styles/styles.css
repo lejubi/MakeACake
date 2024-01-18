@@ -19,7 +19,9 @@ img {
     position: fixed;
     height: 400px;
     width: 400px;
-    margin-top: 300px;
+    margin-top: -50px;
+    margin-left: 380px;
+
 }
 
 .cake {

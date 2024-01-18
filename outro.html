@@ -12,18 +12,17 @@
     <style>
         div {
             /* we could even change this according to the background they pick */
-            background-color: white;
+            /* background-color: white; */
             opacity: 0.75;
             padding: 15px;
             margin: 30px;
             width: 400px;
         }
     </style>
-
-</head>
-<body>
     <script src = "changebg.js" type = "text/javascript"></script>
-    <script>
+</head>
+<body id="body" style="background-color:#c5d6e6">
+    <script type="text/javascript">
         bg--;
         changeBg();
         function getEmail() {
@@ -44,7 +43,16 @@
     <button type="submit" onclick="getEmail()">submit</button>
     <br>
     <a href="mailto:" + email + "?subject=i%20made%20you%20a%20cake!!&body=pretend%20theres an image of a cake">Send mail!</a> -->
-
+    <!-- placeholder items -->
+    <div class="cake"><img src="img/vanilla_cake.png" id="cake"></div>
+    <div class="frosting"><img src="img/nothing.png" id="frosting"></div>
+    <div class="topping"><img src="img/nothing.png" id="topping"></div>
+    <script src="index.html">
+        if(cakeChoice == 2){
+            var one = document.getElementById('cake');
+            one.src = "img/chocolate_cake.png";
+        }
+    </script>
     <!-- <form action="/sendEmail" method="post"> -->
     <div>
         <!-- TODO: get rid of the annoying blank space -->
