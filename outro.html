@@ -14,14 +14,15 @@
     <script>
         function getEmail() {
             var input = document.getElementById("email");
-            var email = input.value;
+            const email = input.value;
             console.log("hi");
-            sendEmail();
+            console.log(email);
+            sendEmail(email);
         }
-        function sendEmail() {
+        function sendEmail(emailinput) {
             // window.open("mailto:" + email + "?subject=i%20made%20you%20a%20cake!!&body=pretend%20theres%20a%20cake");
             // window.open("mailto:" + email + "?subject=i%20made%20you%20a%20cake!!");
-            window.location.href = "mailto:" + email + "?subject=i%20made%20you%20a%20cake!!";
+            window.location.href = "mailto:" + emailinput + "?subject=i%20made%20you%20a%20cake!!";
         }
         bg--;
         changeBg();
@@ -35,14 +36,18 @@
     <a href="mailto:" + email + "?subject=i%20made%20you%20a%20cake!!&body=pretend%20theres an image of a cake">Send mail!</a> -->
 
     <!-- <form action="/sendEmail" method="post"> -->
-    <form autocomplete = "on" 
-    method="POST"
-    enctype="text/plain"
-    name="EmailForm">
+    <h4>Share:</h4>
+    <form autocomplete = "on" >
         <label for="email">Email: </label>
         <input type="text" name="email" id="email">
         <button name="submit" id="submit" onclick = getEmail()>submit</button>
     </form>
+
+    <h4>Download:</h4>
+    <!-- TODO: put final cake images instead of placeholder -->
+    <a href = "img/placeholder_cake.png" download = "cake">
+        <button type = "button"> Download </button>
+    </a>
 
 </body>
 </html>
