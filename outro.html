@@ -62,11 +62,19 @@
             <button type = "button"> Download </button>
         </a>
 
-        <canvas id="cakeSlice" width="200" height="200">
-            
-        </canvas>
-
     </div>
+
+    <img id = "vanilla_cake" src="img/vanilla_cake.png" style="display:none;">
+
+    <!-- will get rid of border -->
+    <canvas id="cakeSlice" width="500" height="500" style="border:1px solid grey"></canvas>
+
+    <script>
+        const c = document.getElementById("cakeSlice");
+        const ctx = c.getContext("2d");
+        var img = document.getElementById("vanilla_cake");
+        ctx.drawImage(img,10,10,150,180);
+    </script>
 
 </body>
 </html>
