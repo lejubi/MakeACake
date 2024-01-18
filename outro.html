@@ -10,7 +10,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Inconsolata&display=swap" rel="stylesheet">
 
 </head>
-<body style="background-color:#c5d6e6">
+<body id="body" style="background-color:#c5d6e6">
     <script>
         function getEmail() {
             var input = document.getElementById("email");
@@ -31,7 +31,16 @@
     <button type="submit" onclick="getEmail()">submit</button>
     <br>
     <a href="mailto:" + email + "?subject=i%20made%20you%20a%20cake!!&body=pretend%20theres an image of a cake">Send mail!</a> -->
-
+    <!-- placeholder items -->
+    <div class="cake"><img src="img/vanilla_cake.png" id="cake"></div>
+    <div class="frosting"><img src="img/nothing.png" id="frosting"></div>
+    <div class="topping"><img src="img/nothing.png" id="topping"></div>
+    <script src="index.html">
+        if(cakeChoice == 2){
+            var one = document.getElementById('cake');
+            one.src = "img/chocolate_cake.png";
+        }
+    </script>
     <!-- <form action="/sendEmail" method="post"> -->
     <form autocomplete = "on" 
     method="POST"
@@ -41,7 +50,6 @@
         <input type="text" name="email" id="email">
         <button name="submit" id="submit" onclick = getEmail()>submit</button>
     </form>
-
 </body>
 </html>
 
