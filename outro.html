@@ -9,23 +9,35 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inconsolata&display=swap" rel="stylesheet">
 
+    <style>
+        div {
+            /* we could even change this according to the background they pick */
+            /* background-color: white; */
+            opacity: 0.75;
+            padding: 15px;
+            margin: 30px;
+            width: 400px;
+        }
+    </style>
+    <script src = "changebg.js" type = "text/javascript"></script>
 </head>
 <body id="body" style="background-color:#c5d6e6">
-    <script>
+    <script type="text/javascript">
+        bg--;
+        changeBg();
         function getEmail() {
             var input = document.getElementById("email");
-            var email = input.value;
+            const email = input.value;
             console.log("hi");
-            sendEmail();
+            console.log(email);
+            sendEmail(email);
         }
-        function sendEmail() {
+        function sendEmail(emailinput) {
             // window.open("mailto:" + email + "?subject=i%20made%20you%20a%20cake!!&body=pretend%20theres%20a%20cake");
             // window.open("mailto:" + email + "?subject=i%20made%20you%20a%20cake!!");
-            window.location.href = "mailto:" + email + "?subject=i%20made%20you%20a%20cake!!";
+            window.location.href = "mailto:" + emailinput + "?subject=i%20made%20you%20a%20cake!!";
         }
     </script>
-
-    <h1>Share Your Cake!</h1>
     <!-- <label for="email">Email:</label>
     <input type="text" id="email" name="email">
     <button type="submit" onclick="getEmail()">submit</button>
@@ -42,14 +54,28 @@
         }
     </script>
     <!-- <form action="/sendEmail" method="post"> -->
-    <form autocomplete = "on" 
-    method="POST"
-    enctype="text/plain"
-    name="EmailForm">
-        <label for="email">Email: </label>
-        <input type="text" name="email" id="email">
-        <button name="submit" id="submit" onclick = getEmail()>submit</button>
-    </form>
+    <div>
+        <!-- TODO: get rid of the annoying blank space -->
+        <h1>Share Your Cake!</h1>
+        <h3>Share:</h3>
+        <form autocomplete = "on" >
+            <label for="email">Email: </label>
+            <input type="text" name="email" id="email">
+            <button name="submit" id="submit" onclick = getEmail()>Share</button>
+        </form>
+
+        <h3>Download:</h3>
+        <!-- TODO: put final cake images instead of placeholder -->
+        <a href = "img/placeholder_cake.png" download = "cake">
+            <button type = "button"> Download </button>
+        </a>
+
+        <canvas id="cakeSlice" width="200" height="200">
+            
+        </canvas>
+
+    </div>
+
 </body>
 </html>
 
