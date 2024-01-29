@@ -79,9 +79,12 @@
     <!-- will get rid of border -->
     <canvas id="cakeSlice" width="500" height="500" style="border:1px solid grey"></canvas>
 
-    <script src = index.html>
+    <script src = index.html> // TODO: have to make index a js file?? perhaps too annoying
+        
         const c = document.getElementById("cakeSlice");
         const ctx = c.getContext("2d");
+
+        console.log(cakeChoice);
 
         if (cakeChoice == 1){
             var cakeFlavor = document.getElementById('cake');
@@ -97,6 +100,44 @@
         }
 
         ctx.drawImage(cakeFlavor,10,10,500,500);
+
+        if (frostingChoice == 1){
+            var frostingChoice = document.getElementById('cake');
+            frostingChoice.src = "img/frosting1.png"
+        }
+        else if (frostingChoice == 2){
+            var frostingChoice = document.getElementById('cake');
+            frostingChoice.src = "img/frosting2.png";
+        }
+        else if (frostingChoice == 3){
+            var frostingChoice = document.getElementById('cake');
+            frostingChoice.src = "img/frosting3.png";
+        }
+
+        ctx.drawImage(frostingChoice,10,10,500,500);
+
+        if (toppingChoice == 1){
+            var toppingChoice = document.getElementById('cake');
+            toppingChoice.src = "img/topping1.png"
+        }
+        else if (toppingChoice == 2){
+            var toppingChoice = document.getElementById('cake');
+            toppingChoice.src = "img/topping2.png";
+        }
+        else if (toppingChoice == 3){
+            var toppingChoice = document.getElementById('cake');
+            toppingChoice.src = "img/topping3.png";
+        }
+        else if (toppingChoice == 4){
+            var toppingChoice = document.getElementById('cake');
+            toppingChoice.src = "img/topping4.png";
+        }
+        else if (toppingChoice == 5){
+            var toppingChoice = document.getElementById('cake');
+            toppingChoice.src = "img/topping5.png";
+        }
+
+        ctx.drawImage(frostingChoice,10,10,500,500);
 
     </script>
 
