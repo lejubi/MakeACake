@@ -20,11 +20,13 @@
         }
     </style>
     <script src = "changebg.js" type = "text/javascript"></script>
+    <script src = "index.js" type = "text/javascript"></script>
 </head>
 <body id="body" style="background-color:#c5d6e6">
     <script type="text/javascript">
         bg--;
         changeBg();
+
         function getEmail() {
             var input = document.getElementById("email");
             const email = input.value;
@@ -47,14 +49,6 @@
     <div class="cake"><img src="img/vanilla_cake.png" id="cake"></div>
     <div class="frosting"><img src="img/nothing.png" id="frosting"></div>
     <div class="topping"><img src="img/nothing.png" id="topping"></div>
-    <script src="index.html">
-        // TODO: why is there a giant cake on the page to the right
-        // TODO: transfering info between pages using index
-        if(cakeChoice == 2){
-            var one = document.getElementById('cake');
-            one.src = "img/chocolate_cake.png";
-        }
-    </script>
     <!-- <form action="/sendEmail" method="post"> -->
     <div>
         <!-- TODO: get rid of the annoying blank space -->
@@ -76,15 +70,19 @@
 
     <img id = "vanilla_slice" src="img/vanilla_slice.png" style="display:none;">
 
-    <!-- will get rid of border -->
+    <!-- i will get rid of border -->
     <canvas id="cakeSlice" width="500" height="500" style="border:1px solid grey"></canvas>
 
-    <script src = index.html> // TODO: have to make index a js file?? perhaps too annoying
-        
+    <script type = text/javascript> 
+        // TODO: have to make index a js file?? perhaps too annoying
+        // TODO: move the giant cake
+        // TODO: move the canvas to the right of the text
         const c = document.getElementById("cakeSlice");
         const ctx = c.getContext("2d");
 
-        console.log(cakeChoice);
+        console.log("cake choice: " + cakeChoice);
+        console.log("frosting choice: " + frostingChoice);
+        console.log("topping choice: " + toppingChoice);
 
         if (cakeChoice == 1){
             var cakeFlavor = document.getElementById('cake');

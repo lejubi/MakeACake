@@ -17,11 +17,7 @@
         </audio>-->
 
         <!-- placeholder items -->
-        <script>
-            var cakeChoice = 1;
-            var frostingChoice = 0;
-            var toppingChoice = 0;
-        </script>
+        <script src="index.js"></script>
         <div class="cake"><img src="img/vanilla_cake.png" id="cake"></div>
         <div class="frosting"><img src="img/nothing.png" id="frosting"></div>
         <div class="topping"><img src="img/nothing.png" id="topping"></div>
@@ -35,31 +31,31 @@
         <h2>Flavors:</h2>
 
         <!-- options -->
-        <input type="radio" id="vanilla" name="flavor" onclick="document.getElementById('cake').src='img/vanilla_cake.png'; cakeChoice = 1">Vanilla</input>
-        <input type="radio" id="chocolate" name="flavor" onclick="document.getElementById('cake').src='img/chocolate_cake.png'; cakeChoice = 2">Chocolate</input>
-        <input type="radio" id="strawberry" name="flavor" onclick="document.getElementById('cake').src='img/strawberry_cake.png'; cakeChoice = 3">Strawberry</input>
+        <input type="radio" id="vanilla" name="flavor" onclick="document.getElementById('cake').src='img/vanilla_cake.png'; cakeChoice1()">Vanilla</input>
+        <input type="radio" id="chocolate" name="flavor" onclick="document.getElementById('cake').src='img/chocolate_cake.png'; cakeChoice2()">Chocolate</input>
+        <input type="radio" id="strawberry" name="flavor" onclick="document.getElementById('cake').src='img/strawberry_cake.png'; cakeChoice3()">Strawberry</input>
     
         <!-- FROSTING -->
         <!-- label -->
         <h2>Frosting:</h2>
 
         <!-- options -->
-        <input type="radio" id="frosting0" name="frosting" onclick="document.getElementById('frosting').src='img/nothing.png'">None</input>
-        <input type="radio" id="frosting1" name="frosting" onclick="document.getElementById('frosting').src='img/frosting1.png'">1</input>
-        <input type="radio" id="frosting2" name="frosting" onclick="document.getElementById('frosting').src='img/frosting2.png'">2</input>
-        <input type="radio" id="frosting3" name="frosting" onclick="document.getElementById('frosting').src='img/frosting3.png'">3</input>
+        <input type="radio" id="frosting0" name="frosting" onclick="document.getElementById('frosting').src='img/nothing.png'; frostingChoice0()">None</input>
+        <input type="radio" id="frosting1" name="frosting" onclick="document.getElementById('frosting').src='img/frosting1.png'; frostingChoice1()">1</input>
+        <input type="radio" id="frosting2" name="frosting" onclick="document.getElementById('frosting').src='img/frosting2.png'; frostingChoice2()">2</input>
+        <input type="radio" id="frosting3" name="frosting" onclick="document.getElementById('frosting').src='img/frosting3.png'; frostingChoice3()">3</input>
         
         <!-- TOPPINGS -->
         <!-- label -->
         <h2>Toppings:</h2>
 
         <!-- options -->
-        <input type="radio" id="topping0" name="topping" onclick="document.getElementById('topping').src='img/nothing.png'">None</input>
-        <input type="radio" id="topping1" name="topping" onclick="document.getElementById('topping').src='img/topping1.png'">1</input>
-        <input type="radio" id="topping2" name="topping" onclick="document.getElementById('topping').src='img/topping2.png'">2</input>
-        <input type="radio" id="topping3" name="topping" onclick="document.getElementById('topping').src='img/topping3.png'">3</input>
-        <input type="radio" id="topping4" name="topping" onclick="document.getElementById('topping').src='img/topping4.png'">4</input>
-        <input type="radio" id="topping5" name="topping" onclick="document.getElementById('topping').src='img/topping5.png'">5</input>
+        <input type="radio" id="topping0" name="topping" onclick="document.getElementById('topping').src='img/nothing.png'; toppingChoice0()">None</input>
+        <input type="radio" id="topping1" name="topping" onclick="document.getElementById('topping').src='img/topping1.png'; toppingChoice1()">1</input>
+        <input type="radio" id="topping2" name="topping" onclick="document.getElementById('topping').src='img/topping2.png'; toppingChoice2()">2</input>
+        <input type="radio" id="topping3" name="topping" onclick="document.getElementById('topping').src='img/topping3.png'; toppingChoice3()">3</input>
+        <input type="radio" id="topping4" name="topping" onclick="document.getElementById('topping').src='img/topping4.png'; toppingChoice4()">4</input>
+        <input type="radio" id="topping5" name="topping" onclick="document.getElementById('topping').src='img/topping5.png'; toppingChoice5()">5</input>
         
         <!-- finish button -->
         <button><a href="outro.html">finish --></a></button>
