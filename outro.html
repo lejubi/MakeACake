@@ -48,6 +48,8 @@
     <div class="frosting"><img src="img/nothing.png" id="frosting"></div>
     <div class="topping"><img src="img/nothing.png" id="topping"></div>
     <script src="index.html">
+        // TODO: why is there a giant cake on the page to the right
+        // TODO: transfering info between pages using index
         if(cakeChoice == 2){
             var one = document.getElementById('cake');
             one.src = "img/chocolate_cake.png";
@@ -72,16 +74,30 @@
 
     </div>
 
-    <img id = "vanilla_cake" src="img/vanilla_cake.png" style="display:none;">
+    <img id = "vanilla_slice" src="img/vanilla_slice.png" style="display:none;">
 
     <!-- will get rid of border -->
     <canvas id="cakeSlice" width="500" height="500" style="border:1px solid grey"></canvas>
 
-    <script>
+    <script src = index.html>
         const c = document.getElementById("cakeSlice");
         const ctx = c.getContext("2d");
-        var img = document.getElementById("vanilla_cake");
-        ctx.drawImage(img,10,10,150,180);
+
+        if (cakeChoice == 1){
+            var cakeFlavor = document.getElementById('cake');
+            cakeFlavor.src = "img/vanilla_cake.png"
+        }
+        else if (cakeChoice == 2){
+            var cakeFlavor = document.getElementById('cake');
+            cakeFlavor.src = "img/chocolate_cake.png";
+        }
+        else if (cakeChoice == 3){
+            var cakeFlavor = document.getElementById('cake');
+            cakeFlavor.src = "img/strawberry_cake.png";
+        }
+
+        ctx.drawImage(cakeFlavor,10,10,500,500);
+
     </script>
 
 </body>
