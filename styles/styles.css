@@ -5,6 +5,7 @@ a {
 
 * {
     font-family: 'Inconsolata', monospace;
+    background-size:cover;
 }
 
 .button {
@@ -30,7 +31,7 @@ h1 {
 
 body {
     margin-left: 380px;
-    margin-top: 140px;
+    margin-top: 120px;
 }
 
 img {
@@ -39,6 +40,7 @@ img {
     width: 400px;
     margin-top: -50px;
     margin-left: 380px;
+
 
 }
 
