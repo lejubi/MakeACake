@@ -68,7 +68,7 @@
     <img id = "chocolate_slice" src="img/chocolate_slice.png" style="display:none;">
 
     <!-- i will get rid of border -->
-    <canvas id="cakeSlice" width="500" height="500" style="border:1px solid grey"></canvas>
+    <!-- <canvas id="cakeSlice" width="500" height="500" style="border:1px solid grey"></canvas> -->
 
     <script type = "text/javascript"> 
         // TODO: have to make index a js file?? perhaps too annoying
@@ -90,68 +90,77 @@
         frostingChoice = parseInt(frostingChoice);
         toppingChoice = parseInt(toppingChoice);
 
-        console.log(typeof cakeChoice);
+        console.log("cake choice: " + typeof cakeChoice);
+        console.log("frosting choice: " + typeof frostingChoice);
+        console.log("topping choice: " + typeof toppingChoice);
 
         if (cakeChoice == 1){
             var cakeFlavor = document.getElementById('cake');
-            cakeFlavor.src = "img/vanilla_slice.png"
+            cakeFlavor.src = "img/vanilla_cake.png"
         }
         else if (cakeChoice == 2){
             var cakeFlavor = document.getElementById('cake');
-            cakeFlavor.src = "img/chocolate_slice.png";
+            cakeFlavor.src = "img/chocolate_cake.png";
         }
         else if (cakeChoice == 3){
             var cakeFlavor = document.getElementById('cake');
-            cakeFlavor.src = "img/strawberry_slice.png";
+            cakeFlavor.src = "img/strawberry_cake.png";
         }
 
         ctx.drawImage(cakeFlavor,10,10,500,500);
 
+        console.log("xdfghjknl");
+
         if (frostingChoice == 0){
-            var frosting = document.getElementById('cake');
+            var frosting = document.getElementById('frosting');
             frosting.src = "img/nothing.png"
         }
         if (frostingChoice == 1){
-            var frosting = document.getElementById('cake');
+            var frosting = document.getElementById('frosting');
             frosting.src = "img/frosting1.png"
         }
         else if (frostingChoice == 2){
-            var frosting = document.getElementById('cake');
+            var frosting = document.getElementById('frosting');
             frosting.src = "img/frosting2.png";
         }
         else if (frostingChoice == 3){
-            var frosting = document.getElementById('cake');
+            var frosting = document.getElementById('frosting');
             frosting.src = "img/frosting3.png";
         }
 
-        ctx.drawImage(frostingChoice,10,10,500,500);
+        ctx.drawImage(frosting,10,10,500,500);
+
+        console.log("asdfghjk");
+
+        console.log(toppingChoice);
 
         if (toppingChoice == 0){
-            var toppingChoice = document.getElementById('cake');
-            toppingChoice.src = "img/nothing.png"
+            var topping = document.getElementById('topping');
+            topping.src = "img/nothing.png";
         }
         else if (toppingChoice == 1){
-            var toppingChoice = document.getElementById('cake');
-            toppingChoice.src = "img/topping1.png"
+            var topping = document.getElementById('topping');
+            topping.src = "img/topping1.png";
         }
         else if (toppingChoice == 2){
-            var toppingChoice = document.getElementById('cake');
-            toppingChoice.src = "img/topping2.png";
+            console.log("vgyujhbknlkm")
+            var topping = document.getElementById('topping');
+            topping.src = "img/topping2.png";
         }
         else if (toppingChoice == 3){
-            var toppingChoice = document.getElementById('cake');
-            toppingChoice.src = "img/topping3.png";
+            var topping = document.getElementById('topping');
+            topping.src = "img/topping3.png";
         }
         else if (toppingChoice == 4){
-            var toppingChoice = document.getElementById('cake');
-            toppingChoice.src = "img/topping4.png";
+            var topping = document.getElementById('topping');
+            topping.src = "img/topping4.png";
         }
         else if (toppingChoice == 5){
-            var toppingChoice = document.getElementById('cake');
-            toppingChoice.src = "img/topping5.png";
+            var topping = document.getElementById('topping');
+            topping.src = "img/topping5.png";
         }
 
-        ctx.drawImage(frostingChoice,10,10,500,500);
+        ctx.drawImage(topping,10,10,500,500);
 
     </script>
 
