@@ -43,6 +43,21 @@ a {
   transform: translate(-5px, -5px);
 }
 
+/* .audioButton {
+    background-color: rgb(184, 213, 234);
+    display: flexbox;
+}
+
+.audioButton:hover {
+    background-color: rgb(151, 188, 214);
+}
+
+.audioButton:active {
+  background-color: rgb(151, 188, 214);
+  box-shadow: 5px 5px rgb(145, 159, 167);
+  transform: translate(-5px, -5px);
+} */
+
 .title {
     width: 14.5vw;
 }

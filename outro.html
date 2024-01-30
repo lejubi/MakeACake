@@ -43,7 +43,7 @@
         function sendEmail(emailinput) {
             // window.open("mailto:" + email + "?subject=I%20made%20you%20a%20cake!!&body=pretend%20theres%20a%20cake");
             // window.open("mailto:" + email + "?subject=I%20made%20you%20a%20cake!!");
-            window.location.href = "mailto:" + emailinput + "?subject=I%20made%20you%20a%20cake!!";
+            window.location.href = "mailto:" + emailinput + "?subject=I%20made%20you%20a%20cake!" + "yourCake.png";
         }
     </script>
 
@@ -90,7 +90,7 @@
             console.log("download button pressed");
             // Create a temporary link
             var link = document.createElement('a');
-            link.download = 'canvas_image.png';
+            link.download = 'yourCake.png';
             console.log(link);
 
             // Convert canvas content to data URL
