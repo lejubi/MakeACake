@@ -87,7 +87,7 @@
         var canvas = document.getElementById("cakeSlice");
         
         function downloadCanvas() {
-            console.log("download button pressed")
+            console.log("download button pressed");
             // Create a temporary link
             var link = document.createElement('a');
             link.download = 'canvas_image.png';
@@ -96,6 +96,15 @@
             // Convert canvas content to data URL
             link.href = canvas.toDataURL("image/png");
             console.log(link);
+
+            // Append the link to the document
+            document.body.appendChild(link);
+
+            // Simulate a click on the link to trigger the download
+            link.click();
+
+            // Remove the link from the document
+            document.body.removeChild(link);
         }
 
         // TODO: have to make index a js file?? perhaps too annoying
