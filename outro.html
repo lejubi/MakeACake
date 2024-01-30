@@ -60,13 +60,15 @@
 
         <h3>Download:</h3>
         <!-- TODO: put final cake images instead of placeholder -->
-        <a href = "img/placeholder_cake.png" download = "cake">
+        <!-- <a href = "img/placeholder_cake.png" download = "cake">
             <button type = "button"> Download </button>
-        </a>
+        </a> -->
 
     </div>
 
     <!-- i will get rid of border -->
+    <a id="canvasDownload" href = "#" download>Download Cake</a>
+
     <canvas id="cakeSlice" width="500" height="500" style="border:1px solid grey"></canvas>
 
     <script type = "text/javascript"> 
@@ -77,9 +79,10 @@
         cakeChoice = localStorage.getItem("cakeChoice");
         frostingChoice = localStorage.getItem("frostingChoice");
         toppingChoice = localStorage.getItem("toppingChoice");
-
+        
         const c = document.getElementById("cakeSlice");
         const ctx = c.getContext("2d");
+        const canvasDownload = document.getElementById("canvasDownload");
 
         console.log("cake choice: " + cakeChoice);
         console.log("frosting choice: " + frostingChoice);
@@ -95,15 +98,15 @@
 
         if (cakeChoice == 1){
             var cakeFlavor = document.getElementById('cake');
-            cakeFlavor.src = "img/vanilla_cake.png"
+            cakeFlavor.src = "img/vanilla_slice.png"
         }
         else if (cakeChoice == 2){
             var cakeFlavor = document.getElementById('cake');
-            cakeFlavor.src = "img/chocolate_cake.png";
+            cakeFlavor.src = "img/chocolate_slice.png";
         }
         else if (cakeChoice == 3){
             var cakeFlavor = document.getElementById('cake');
-            cakeFlavor.src = "img/strawberry_cake.png";
+            cakeFlavor.src = "img/strawberry_slice.png";
         }
 
         cakeFlavor.addEventListener("load", (e) => {
@@ -141,29 +144,33 @@
         }
         else if (toppingChoice == 1){
             var topping = document.getElementById('topping');
-            topping.src = "img/topping1.png";
+            topping.src = "img/topping1_slice.png";
         }
         else if (toppingChoice == 2){
             console.log("vgyujhbknlkm")
             var topping = document.getElementById('topping');
-            topping.src = "img/topping2.png";
+            topping.src = "img/topping2_slice.png";
         }
         else if (toppingChoice == 3){
             var topping = document.getElementById('topping');
-            topping.src = "img/topping3.png";
+            topping.src = "img/topping3_slice.png";
         }
         else if (toppingChoice == 4){
             var topping = document.getElementById('topping');
-            topping.src = "img/topping4.png";
+            topping.src = "img/topping4_slice.png";
         }
         else if (toppingChoice == 5){
             var topping = document.getElementById('topping');
-            topping.src = "img/topping5.png";
+            topping.src = "img/topping5_slice.png";
         }
 
         topping.addEventListener("load", (e) => {
             ctx.drawImage(topping,10,10,500,500);
         })
+
+        const pngDataUrl = c.toDataURL("image/png")
+        console.log(pngDataUrl);
+        canvasDownload.href = pngDataUrl;
 
     </script>
 
