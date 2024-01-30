@@ -2,8 +2,6 @@ var cakeChoice = 1;
 var frostingChoice = 0;
 var toppingChoice = 0;
 
-localStorage.setItem("cakeChoice","1");
-
 function cakeChoice1() {localStorage.setItem("cakeChoice", "1"); console.log(localStorage.getItem("cakeChoice"))}
 function cakeChoice2() {localStorage.setItem("cakeChoice", "2"); console.log(localStorage.getItem("cakeChoice"))}
 function cakeChoice3() {localStorage.setItem("cakeChoice", "3"); console.log(localStorage.getItem("cakeChoice"))}
