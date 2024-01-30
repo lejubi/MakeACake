@@ -28,7 +28,8 @@
 
             localStorage.clear();
             changeBgSound = new sound("sounds/changeBg.mp3");
-            clickOp = new sound("sounds/clickOp.mp3");
+            clickOpSound = new sound("sounds/clickOp.mp3");
+            finishSound = new sound("sounds/finish.mp3")
         </script>
         <h1>~ Make A Cake ~</h1>
         <!-- use the following lines for background music:
@@ -77,7 +78,7 @@
         <br>
         <br>
         <!-- finish button -->
-        <button><a href="outro.html">finish --></a></button>
+        <button><a href="outro.html" onclick="finishSound.play();" >finish --></a></button>
 
         <!-- button for background change -->
         <br>
