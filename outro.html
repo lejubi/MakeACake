@@ -44,9 +44,10 @@
             sendEmail(email);
         }
         function sendEmail(emailinput) {
+            console.log("send email button pushed")
             // window.open("mailto:" + email + "?subject=I%20made%20you%20a%20cake!!&body=pretend%20theres%20a%20cake");
             // window.open("mailto:" + email + "?subject=I%20made%20you%20a%20cake!!");
-            window.location.href = "mailto:" + emailinput + "?subject=I%20made%20you%20a%20cake!" + "yourCake.png";
+            window.location.href = "mailto:" + emailinput + "?subject=I%20made%20you%20a%20cake!" + link;
         }
     </script>
 
