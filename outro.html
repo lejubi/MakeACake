@@ -42,9 +42,11 @@
     </script>
 
     <!-- placeholder items -->
-    <div class="cake"><img src="img/vanilla_cake.png" id="cake"></div>
-    <div class="frosting"><img src="img/nothing.png" id="frosting"></div>
-    <div class="topping"><img src="img/nothing.png" id="topping"></div>
+    <div style="display: none">
+        <img id="cake" src="img/vanilla_cake.png"/>
+        <img id="frosting" src="img/nothing.png"/>
+        <img id="topping" src="img/nothing.png"/>
+    </div>
 
     <div>
         <!-- TODO: get rid of the annoying blank space -->
@@ -64,11 +66,8 @@
 
     </div>
 
-    <img id = "vanilla_slice" src="img/vanilla_slice.png" style="display:none;">
-    <img id = "chocolate_slice" src="img/chocolate_slice.png" style="display:none;">
-
     <!-- i will get rid of border -->
-    <!-- <canvas id="cakeSlice" width="500" height="500" style="border:1px solid grey"></canvas> -->
+    <canvas id="cakeSlice" width="500" height="500" style="border:1px solid grey"></canvas>
 
     <script type = "text/javascript"> 
         // TODO: have to make index a js file?? perhaps too annoying
@@ -107,9 +106,9 @@
             cakeFlavor.src = "img/strawberry_cake.png";
         }
 
-        ctx.drawImage(cakeFlavor,10,10,500,500);
-
-        console.log("xdfghjknl");
+        cakeFlavor.addEventListener("load", (e) => {
+            ctx.drawImage(cakeFlavor,10,10,500,500);
+        })
 
         if (frostingChoice == 0){
             var frosting = document.getElementById('frosting');
@@ -128,7 +127,9 @@
             frosting.src = "img/frosting3.png";
         }
 
-        ctx.drawImage(frosting,10,10,500,500);
+        frosting.addEventListener("load", (e) => {
+            ctx.drawImage(frosting,10,10,500,500);
+        })
 
         console.log("asdfghjk");
 
@@ -160,7 +161,9 @@
             topping.src = "img/topping5.png";
         }
 
-        ctx.drawImage(topping,10,10,500,500);
+        topping.addEventListener("load", (e) => {
+            ctx.drawImage(topping,10,10,500,500);
+        })
 
     </script>
 
