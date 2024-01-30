@@ -68,6 +68,7 @@
 
         <h3>Download:</h3>
         <!-- TODO: put final cake images instead of placeholder -->
+        <button type = "button" id="downloadBtn" onclick=downloadCanvas()> Download </button>
         <!-- <a href = "img/placeholder_cake.png" download = "cake">
             <button type = "button"> Download </button>
         </a> -->
@@ -81,9 +82,42 @@
     </div>
 
     <script type = "text/javascript"> 
+
+        var canvas = document.getElementById("cakeSlice");
+        
+        function downloadCanvas() {
+            console.log("download button pressed")
+            // Create a temporary link
+            var link = document.createElement('a');
+            link.download = 'canvas_image.png';
+            console.log(link);
+
+            // Convert canvas content to data URL
+            link.href = canvas.toDataURL("image/png");
+            console.log(link);
+        }
+
         // TODO: have to make index a js file?? perhaps too annoying
         // TODO: move the giant cake
         // TODO: move the canvas to the right of the text
+
+        // function downloadImage(){
+        //     let c = document.getElementById("c");
+        //     var dataURL = c.toDataURL("image/png");
+        //     var a = document.createElement('a');
+        //     a.href = dataURL;
+        //     a.download = 'canvas-download.jpeg';
+        //     a.click();
+        // }
+
+        // let download = document.getElementById('downloadBtn')
+        // download.addEventListener('click', downloadImage)
+
+        // function convertCanvasToImage(c) {
+        //     var image = new Image();
+        //     image.src = c.toDataURL("image/png");
+        //     return image;
+        // }
 
         cakeChoice = localStorage.getItem("cakeChoice");
         frostingChoice = localStorage.getItem("frostingChoice");
@@ -91,7 +125,7 @@
         
         const c = document.getElementById("cakeSlice");
         const ctx = c.getContext("2d");
-        const canvasDownload = document.getElementById("canvasDownload");
+        // const canvasDownload = document.getElementById("canvasDownload");
 
         console.log("cake choice: " + cakeChoice);
         console.log("frosting choice: " + frostingChoice);
@@ -141,8 +175,6 @@
         
         var topping;
 
-        console.log("asdfghjk");
-
         console.log(toppingChoice);
 
         if (toppingChoice == 0){
@@ -181,9 +213,9 @@
         var cakeImg = imgcanvas.toDataURL("image/png");
         document.write('<img src="'+cakeImge+'"/>')
 
-        const pngDataUrl = c.toDataURL("image/png")
-        console.log(pngDataUrl);
-        canvasDownload.href = pngDataUrl;
+        //const pngDataUrl = c.toDataURL("image/png")
+        //console.log(pngDataUrl);
+        //canvasDownload.href = pngDataUrl;
 
     </script>
 
