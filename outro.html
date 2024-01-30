@@ -18,6 +18,11 @@
             margin: 30px;
             width: 400px;
         }
+        .cakeCanvas {
+            margin: 0px;
+            padding: 0px;
+
+        }
     </style>
     <script src = "changebg.js" type = "text/javascript"></script>
     <script src = "index.js" type = "text/javascript"></script>
@@ -73,8 +78,9 @@
 
     <!-- i will get rid of border -->
     <a id="canvasDownload" href = "#" download>Download Cake</a>
-
-    <canvas id="cakeSlice" width="500" height="500" style="border:1px solid grey"></canvas>
+    <div class="cakeCanvas">
+        <canvas id="cakeSlice" width="500" height="500" style="border:1px solid grey"></canvas>
+    </div>
 
     <script type = "text/javascript"> 
 
@@ -148,10 +154,6 @@
             cakeFlavor.src = "img/strawberry_slice.png";
         }
 
-        cakeFlavor.addEventListener("load", (e) => {
-            ctx.drawImage(cakeFlavor,10,10,500,500);
-        })
-
         var frosting;
 
         if (frostingChoice == 0){
@@ -170,10 +172,6 @@
             frosting = document.getElementById('frosting');
             frosting.src = "img/frosting3_slice.png";
         }
-
-        frosting.addEventListener("load", (e) => {
-            ctx.drawImage(frosting,10,10,500,500);
-        })
         
         var topping;
 
@@ -206,6 +204,8 @@
         }
 
         topping.addEventListener("load", (e) => {
+            ctx.drawImage(cakeFlavor,10,10,500,500);
+            ctx.drawImage(frosting,10,10,500,500);
             ctx.drawImage(topping,10,10,500,500);
         })
 
