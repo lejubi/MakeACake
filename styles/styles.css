@@ -24,7 +24,7 @@ a {
 
 .finishButton:active {
   background-color: rgb(222, 163, 185);
-  box-shadow: 0 5px #666;
+  box-shadow: 5px 5px rgb(174, 147, 157);
   transform: translateY(4px);
 }
 
@@ -38,7 +38,7 @@ a {
 
 .changeBgButton:active {
   background-color: rgb(152, 159, 213);
-  box-shadow: 0 5px #666;
+  box-shadow: 5px 5px rgb(145, 149, 167);
   transform: translateY(4px);
 }
 
