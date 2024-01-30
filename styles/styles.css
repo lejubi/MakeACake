@@ -10,7 +10,7 @@ a {
 
 .button {
     padding: 10px;
-    border: 2px solid white;
+    border: 3px solid white;
     font-size: 105%;
 }
 
@@ -58,7 +58,7 @@ a {
 
 h1 {
     padding: 10px;
-    border: 2px solid white;
+    border: 3px solid white;
     background-color: antiquewhite;
     width: 243px;
 }
