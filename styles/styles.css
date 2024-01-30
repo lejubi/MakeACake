@@ -5,7 +5,7 @@ a {
 
 * {
     font-family: 'Inconsolata', monospace;
-    background-size: cover;
+    background-size: 100vw, 100vh;
 }
 
 .button {
@@ -25,7 +25,7 @@ a {
 .finishButton:active {
   background-color: rgb(222, 163, 185);
   box-shadow: 5px 5px rgb(174, 147, 157);
-  transform: translateY(4px);
+  transform: translate(-5px, -5px);
 }
 
 .changeBgButton {
@@ -39,7 +39,7 @@ a {
 .changeBgButton:active {
   background-color: rgb(152, 159, 213);
   box-shadow: 5px 5px rgb(145, 149, 167);
-  transform: translateY(4px);
+  transform: translate(-5px, -5px);
 }
 
 .title {
