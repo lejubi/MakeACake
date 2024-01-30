@@ -94,7 +94,8 @@
             console.log(link);
 
             // Convert canvas content to data URL
-            link.href = canvas.toDataURL("image/png").replace("image/png", "image/octet-stream");
+            link.href = canvas.toDataURL("image/png");
+            console.log(link);
         }
 
         // TODO: have to make index a js file?? perhaps too annoying
