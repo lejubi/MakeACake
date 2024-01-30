@@ -40,16 +40,12 @@
             window.location.href = "mailto:" + emailinput + "?subject=i%20made%20you%20a%20cake!!";
         }
     </script>
-    <!-- <label for="email">Email:</label>
-    <input type="text" id="email" name="email">
-    <button type="submit" onclick="getEmail()">submit</button>
-    <br>
-    <a href="mailto:" + email + "?subject=i%20made%20you%20a%20cake!!&body=pretend%20theres an image of a cake">Send mail!</a> -->
+
     <!-- placeholder items -->
     <div class="cake"><img src="img/vanilla_cake.png" id="cake"></div>
     <div class="frosting"><img src="img/nothing.png" id="frosting"></div>
     <div class="topping"><img src="img/nothing.png" id="topping"></div>
-    <!-- <form action="/sendEmail" method="post"> -->
+
     <div>
         <!-- TODO: get rid of the annoying blank space -->
         <h1>Share Your Cake!</h1>
@@ -69,14 +65,20 @@
     </div>
 
     <img id = "vanilla_slice" src="img/vanilla_slice.png" style="display:none;">
+    <img id = "chocolate_slice" src="img/chocolate_slice.png" style="display:none;">
 
     <!-- i will get rid of border -->
     <canvas id="cakeSlice" width="500" height="500" style="border:1px solid grey"></canvas>
 
-    <script type = text/javascript> 
+    <script type = "text/javascript"> 
         // TODO: have to make index a js file?? perhaps too annoying
         // TODO: move the giant cake
         // TODO: move the canvas to the right of the text
+
+        cakeChoice = localStorage.getItem("cakeChoice");
+        frostingChoice = localStorage.getItem("frostingChoice");
+        toppingChoice = localStorage.getItem("toppingChoice");
+
         const c = document.getElementById("cakeSlice");
         const ctx = c.getContext("2d");
 
@@ -84,37 +86,51 @@
         console.log("frosting choice: " + frostingChoice);
         console.log("topping choice: " + toppingChoice);
 
+        cakeChoice = parseInt(cakeChoice);
+        frostingChoice = parseInt(frostingChoice);
+        toppingChoice = parseInt(toppingChoice);
+
+        console.log(typeof cakeChoice);
+
         if (cakeChoice == 1){
             var cakeFlavor = document.getElementById('cake');
-            cakeFlavor.src = "img/vanilla_cake.png"
+            cakeFlavor.src = "img/vanilla_slice.png"
         }
         else if (cakeChoice == 2){
             var cakeFlavor = document.getElementById('cake');
-            cakeFlavor.src = "img/chocolate_cake.png";
+            cakeFlavor.src = "img/chocolate_slice.png";
         }
         else if (cakeChoice == 3){
             var cakeFlavor = document.getElementById('cake');
-            cakeFlavor.src = "img/strawberry_cake.png";
+            cakeFlavor.src = "img/strawberry_slice.png";
         }
 
         ctx.drawImage(cakeFlavor,10,10,500,500);
 
+        if (frostingChoice == 0){
+            var frosting = document.getElementById('cake');
+            frosting.src = "img/nothing.png"
+        }
         if (frostingChoice == 1){
-            var frostingChoice = document.getElementById('cake');
-            frostingChoice.src = "img/frosting1.png"
+            var frosting = document.getElementById('cake');
+            frosting.src = "img/frosting1.png"
         }
         else if (frostingChoice == 2){
-            var frostingChoice = document.getElementById('cake');
-            frostingChoice.src = "img/frosting2.png";
+            var frosting = document.getElementById('cake');
+            frosting.src = "img/frosting2.png";
         }
         else if (frostingChoice == 3){
-            var frostingChoice = document.getElementById('cake');
-            frostingChoice.src = "img/frosting3.png";
+            var frosting = document.getElementById('cake');
+            frosting.src = "img/frosting3.png";
         }
 
         ctx.drawImage(frostingChoice,10,10,500,500);
 
-        if (toppingChoice == 1){
+        if (toppingChoice == 0){
+            var toppingChoice = document.getElementById('cake');
+            toppingChoice.src = "img/nothing.png"
+        }
+        else if (toppingChoice == 1){
             var toppingChoice = document.getElementById('cake');
             toppingChoice.src = "img/topping1.png"
         }
