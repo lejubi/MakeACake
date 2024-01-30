@@ -10,7 +10,27 @@
         <link href="https://fonts.googleapis.com/css2?family=Inconsolata&display=swap" rel="stylesheet">
     </head>
     <body style="background-image: url('img/bg1.png');">
-        <script>localStorage.clear();</script>
+        <script>
+            function sound(src) {
+                this.sound = document.createElement("audio");
+                this.sound.src = src;
+                this.sound.setAttribute("preload", "auto");
+                this.sound.setAttribute("controls", "none");
+                this.sound.style.display = "none";
+                document.body.appendChild(this.sound);
+                this.play = function(){
+                this.sound.play();
+                }
+                this.stop = function(){
+                this.sound.pause();
+                }
+            }
+
+            localStorage.clear();
+            changeBgSound = new sound("sounds/changeBg.mp3");
+            clickOpSound = new sound("sounds/clickOp.mp3");
+            finishSound = new sound("sounds/finish.mp3")
+        </script>
         <h1>~ Make A Cake ~</h1>
         <!-- use the following lines for background music:
         <audio controls autoplay loop>
@@ -28,44 +48,46 @@
         <h2>Flavors:</h2>
 
         <!-- options -->
-        <input type="radio" id="vanilla" name="flavor" onclick="document.getElementById('cake').src='img/vanilla_cake.png'; cakeChoice1()">Vanilla</input>
-        <input type="radio" id="chocolate" name="flavor" onclick="document.getElementById('cake').src='img/chocolate_cake.png'; cakeChoice2()">Chocolate</input>
-        <input type="radio" id="strawberry" name="flavor" onclick="document.getElementById('cake').src='img/strawberry_cake.png'; cakeChoice3()">Strawberry</input>
+        <input type="radio" id="vanilla" name="flavor" onclick="document.getElementById('cake').src='img/vanilla_cake.png'; cakeChoice1(); clickOpSound.play();">Vanilla</input>
+        <input type="radio" id="chocolate" name="flavor" onclick="document.getElementById('cake').src='img/chocolate_cake.png'; cakeChoice2(); clickOpSound.play();">Chocolate</input>
+        <input type="radio" id="strawberry" name="flavor" onclick="document.getElementById('cake').src='img/strawberry_cake.png'; cakeChoice3(); clickOpSound.play();">Strawberry</input>
     
         <!-- FROSTING -->
         <!-- label -->
         <h2>Frosting:</h2>
 
         <!-- options -->
-        <input type="radio" id="frosting0" name="frosting" onclick="document.getElementById('frosting').src='img/nothing.png'; frostingChoice0()">None</input>
-        <input type="radio" id="frosting1" name="frosting" onclick="document.getElementById('frosting').src='img/frosting1.png'; frostingChoice1()">1</input>
-        <input type="radio" id="frosting2" name="frosting" onclick="document.getElementById('frosting').src='img/frosting2.png'; frostingChoice2()">2</input>
-        <input type="radio" id="frosting3" name="frosting" onclick="document.getElementById('frosting').src='img/frosting3.png'; frostingChoice3()">3</input>
+        <input type="radio" id="frosting0" name="frosting" onclick="document.getElementById('frosting').src='img/nothing.png'; frostingChoice0(); clickOpSound.play();">None</input>
+        <input type="radio" id="frosting1" name="frosting" onclick="document.getElementById('frosting').src='img/frosting1.png'; frostingChoice1(); clickOpSound.play();">Green</input>
+        <input type="radio" id="frosting2" name="frosting" onclick="document.getElementById('frosting').src='img/frosting2.png'; frostingChoice2(); clickOpSound.play();">Pink</input>
+        <input type="radio" id="frosting3" name="frosting" onclick="document.getElementById('frosting').src='img/frosting3.png'; frostingChoice3(); clickOpSound.play();">Blue</input>
         
         <!-- TOPPINGS -->
         <!-- label -->
         <h2>Toppings:</h2>
 
         <!-- options -->
-        <input type="radio" id="topping0" name="topping" onclick="document.getElementById('topping').src='img/nothing.png'; toppingChoice0()">None</input>
-        <input type="radio" id="topping1" name="topping" onclick="document.getElementById('topping').src='img/topping1.png'; toppingChoice1()">1</input>
-        <input type="radio" id="topping2" name="topping" onclick="document.getElementById('topping').src='img/topping2.png'; toppingChoice2()">2</input>
-        <input type="radio" id="topping3" name="topping" onclick="document.getElementById('topping').src='img/topping3.png'; toppingChoice3()">3</input>
-        <input type="radio" id="topping4" name="topping" onclick="document.getElementById('topping').src='img/topping4.png'; toppingChoice4()">4</input>
-        <input type="radio" id="topping5" name="topping" onclick="document.getElementById('topping').src='img/topping5.png'; toppingChoice5()">5</input>
+        <input type="radio" id="topping0" name="topping" onclick="document.getElementById('topping').src='img/nothing.png'; toppingChoice0(); clickOpSound.play();">None</input>
+        <input type="radio" id="topping1" name="topping" onclick="document.getElementById('topping').src='img/topping1.png'; toppingChoice1(); clickOpSound.play();">Sprinkles</input>
+        <input type="radio" id="topping2" name="topping" onclick="document.getElementById('topping').src='img/topping2.png'; toppingChoice2(); clickOpSound.play();">Strawberries</input>
+        <br>
+        <br>
+        <input type="radio" id="topping3" name="topping" onclick="document.getElementById('topping').src='img/topping3.png'; toppingChoice3(); clickOpSound.play();">Whipped Cream</input>
+        <input type="radio" id="topping4" name="topping" onclick="document.getElementById('topping').src='img/topping4.png'; toppingChoice4(); clickOpSound.play();">Candles</input>
+        <input type="radio" id="topping5" name="topping" onclick="document.getElementById('topping').src='img/topping5.png'; toppingChoice5(); clickOpSound.play();">Cherries</input>
         
         <br>
         <br>
         <br>
         <!-- finish button -->
-        <button><a href="outro.html">finish --></a></button>
+        <button class = "button finishButton" onclick="finishSound.play()"><a href="outro.html">Finish --></a></button>
 
         <!-- button for background change -->
         <br>
         <br>
         <br>
-        <button type="button" onclick="changeBg()">Change Background</button>
         <script src="changebg.js"></script>
+        <button type="button" class = "button changeBgButton" onclick="changeBg()">Change Background!</button>
 
     </body>
 </html>

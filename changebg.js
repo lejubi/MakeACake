@@ -6,4 +6,6 @@ function changeBg() {
         bg = 0;
     }
     document.body.style.backgroundImage = bgimgs[bg];
+    document.body.style.maxWidth = "1800px";
+    changeBgSound.play();
 }
