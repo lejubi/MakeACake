@@ -115,10 +115,6 @@
             cakeFlavor.src = "img/strawberry_slice.png";
         }
 
-        cakeFlavor.addEventListener("load", (e) => {
-            ctx.drawImage(cakeFlavor,10,10,500,500);
-        })
-
         var frosting;
 
         if (frostingChoice == 0){
@@ -137,10 +133,6 @@
             frosting = document.getElementById('frosting');
             frosting.src = "img/frosting3_slice.png";
         }
-
-        frosting.addEventListener("load", (e) => {
-            ctx.drawImage(frosting,10,10,500,500);
-        })
         
         var topping;
 
@@ -175,6 +167,8 @@
         }
 
         topping.addEventListener("load", (e) => {
+            ctx.drawImage(cakeFlavor,10,10,500,500);
+            ctx.drawImage(frosting,10,10,500,500);
             ctx.drawImage(topping,10,10,500,500);
         })
 
