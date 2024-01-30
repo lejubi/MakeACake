@@ -6,4 +6,5 @@ function changeBg() {
         bg = 0;
     }
     document.body.style.backgroundImage = bgimgs[bg];
+    changeBgSound.play();
 }

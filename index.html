@@ -10,7 +10,26 @@
         <link href="https://fonts.googleapis.com/css2?family=Inconsolata&display=swap" rel="stylesheet">
     </head>
     <body style="background-image: url('img/bg1.png');">
-        <script>localStorage.clear();</script>
+        <script>
+            function sound(src) {
+                this.sound = document.createElement("audio");
+                this.sound.src = src;
+                this.sound.setAttribute("preload", "auto");
+                this.sound.setAttribute("controls", "none");
+                this.sound.style.display = "none";
+                document.body.appendChild(this.sound);
+                this.play = function(){
+                this.sound.play();
+                }
+                this.stop = function(){
+                this.sound.pause();
+                }
+            }
+
+            localStorage.clear();
+            changeBgSound = new sound("sounds/changeBg.mp3");
+            clickOp = new sound("sounds/clickOp.mp3");
+        </script>
         <h1>~ Make A Cake ~</h1>
         <!-- use the following lines for background music:
         <audio controls autoplay loop>
@@ -64,8 +83,8 @@
         <br>
         <br>
         <br>
-        <button type="button" onclick="changeBg()">Change Background</button>
         <script src="changebg.js"></script>
+        <button type="button" onclick="changeBg()">change background!</button>
 
     </body>
 </html>
