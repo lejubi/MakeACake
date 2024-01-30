@@ -19,17 +19,27 @@ a {
 }
 
 .finishButton:hover {
-    background-color: #3e8e41
+    background-color: rgb(222, 163, 185);
 }
 
 .finishButton:active {
-  background-color: #3e8e41;
+  background-color: rgb(222, 163, 185);
   box-shadow: 0 5px #666;
   transform: translateY(4px);
 }
 
 .changeBgButton {
     background-color: rgb(184, 189, 234);
+}
+
+.changeBgButton:hover {
+    background-color: rgb(152, 159, 213);
+}
+
+.changeBgButton:active {
+  background-color: rgb(152, 159, 213);
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
 }
 
 .title {
