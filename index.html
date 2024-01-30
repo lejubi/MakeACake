@@ -10,9 +10,7 @@
         <link href="https://fonts.googleapis.com/css2?family=Inconsolata&display=swap" rel="stylesheet">
     </head>
     <body style="background-image: url('img/bg1.png');">
-        <div>
-            <!-- audio button -->
-        </div>
+        <!-- <button class = "button audioButton" onclick="music.play();">audio</button> -->
         <script>
             function sound(src) {
                 this.sound = document.createElement("audio");
@@ -32,7 +30,8 @@
             localStorage.clear();
             changeBgSound = new sound("sounds/changeBg.mp3");
             clickOpSound = new sound("sounds/clickOp.mp3");
-            finishSound = new sound("sounds/finish.mp3")
+            finishSound = new sound("sounds/finish.mp3");
+            themeSong = new sound("sounds/themeSong.mp3");
         </script>
         <h1>~ Make A Cake ~</h1>
         <!-- use the following lines for background music:
