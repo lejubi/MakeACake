@@ -22,6 +22,20 @@ a {
     background-color: rgb(184, 189, 234);
 }
 
+.title {
+    width: 200px;
+}
+
+.center {
+    margin: auto;
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
 h1 {
     padding: 10px;
     border: 2px solid white;
