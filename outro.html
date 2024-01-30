@@ -47,7 +47,7 @@
             console.log("send email button pushed")
             // window.open("mailto:" + email + "?subject=I%20made%20you%20a%20cake!!&body=pretend%20theres%20a%20cake");
             // window.open("mailto:" + email + "?subject=I%20made%20you%20a%20cake!!");
-            window.location.href = "mailto:" + emailinput + "?subject=I%20made%20you%20a%20cake!" + link;
+            window.location.href = "mailto:" + emailinput + "?subject=I%20made%20you%20a%20cake!?body=";
         }
     </script>
 
@@ -92,22 +92,15 @@
         
         function downloadCanvas() {
             console.log("download button pressed");
-            // Create a temporary link
             var link = document.createElement('a');
             link.download = 'yourCake.png';
             console.log(link);
 
-            // Convert canvas content to data URL
             link.href = canvas.toDataURL("image/png");
             console.log(link);
 
-            // Append the link to the document
             document.body.appendChild(link);
-
-            // Simulate a click on the link to trigger the download
             link.click();
-
-            // Remove the link from the document
             document.body.removeChild(link);
         }
 
