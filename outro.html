@@ -96,16 +96,18 @@
         console.log("frosting choice: " + typeof frostingChoice);
         console.log("topping choice: " + typeof toppingChoice);
 
+        var cakeFlavor;
+
         if (cakeChoice == 1){
-            var cakeFlavor = document.getElementById('cake');
+            cakeFlavor = document.getElementById('cake');
             cakeFlavor.src = "img/vanilla_slice.png"
         }
         else if (cakeChoice == 2){
-            var cakeFlavor = document.getElementById('cake');
+            cakeFlavor = document.getElementById('cake');
             cakeFlavor.src = "img/chocolate_slice.png";
         }
         else if (cakeChoice == 3){
-            var cakeFlavor = document.getElementById('cake');
+            cakeFlavor = document.getElementById('cake');
             cakeFlavor.src = "img/strawberry_slice.png";
         }
 
@@ -113,54 +115,58 @@
             ctx.drawImage(cakeFlavor,10,10,500,500);
         })
 
+        var frosting;
+
         if (frostingChoice == 0){
-            var frosting = document.getElementById('frosting');
+            frosting = document.getElementById('frosting');
             frosting.src = "img/nothing.png"
         }
         if (frostingChoice == 1){
-            var frosting = document.getElementById('frosting');
+            frosting = document.getElementById('frosting');
             frosting.src = "img/frosting1.png"
         }
         else if (frostingChoice == 2){
-            var frosting = document.getElementById('frosting');
+            frosting = document.getElementById('frosting');
             frosting.src = "img/frosting2.png";
         }
         else if (frostingChoice == 3){
-            var frosting = document.getElementById('frosting');
+            frosting = document.getElementById('frosting');
             frosting.src = "img/frosting3.png";
         }
 
         frosting.addEventListener("load", (e) => {
             ctx.drawImage(frosting,10,10,500,500);
         })
+        
+        var topping;
 
         console.log("asdfghjk");
 
         console.log(toppingChoice);
 
         if (toppingChoice == 0){
-            var topping = document.getElementById('topping');
+            topping = document.getElementById('topping');
             topping.src = "img/nothing.png";
         }
         else if (toppingChoice == 1){
-            var topping = document.getElementById('topping');
+            topping = document.getElementById('topping');
             topping.src = "img/topping1_slice.png";
         }
         else if (toppingChoice == 2){
             console.log("vgyujhbknlkm")
-            var topping = document.getElementById('topping');
+            topping = document.getElementById('topping');
             topping.src = "img/topping2_slice.png";
         }
         else if (toppingChoice == 3){
-            var topping = document.getElementById('topping');
+            topping = document.getElementById('topping');
             topping.src = "img/topping3_slice.png";
         }
         else if (toppingChoice == 4){
-            var topping = document.getElementById('topping');
+            topping = document.getElementById('topping');
             topping.src = "img/topping4_slice.png";
         }
         else if (toppingChoice == 5){
-            var topping = document.getElementById('topping');
+            topping = document.getElementById('topping');
             topping.src = "img/topping5_slice.png";
         }
 
