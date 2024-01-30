@@ -35,9 +35,9 @@
             sendEmail(email);
         }
         function sendEmail(emailinput) {
-            // window.open("mailto:" + email + "?subject=i%20made%20you%20a%20cake!!&body=pretend%20theres%20a%20cake");
-            // window.open("mailto:" + email + "?subject=i%20made%20you%20a%20cake!!");
-            window.location.href = "mailto:" + emailinput + "?subject=i%20made%20you%20a%20cake!!";
+            // window.open("mailto:" + email + "?subject=I%20made%20you%20a%20cake!!&body=pretend%20theres%20a%20cake");
+            // window.open("mailto:" + email + "?subject=I%20made%20you%20a%20cake!!");
+            window.location.href = "mailto:" + emailinput + "?subject=I%20made%20you%20a%20cake!!";
         }
     </script>
 
@@ -46,6 +46,10 @@
         <img id="cake" src="img/vanilla_cake.png"/>
         <img id="frosting" src="img/nothing.png"/>
         <img id="topping" src="img/nothing.png"/>
+    </div>
+
+    <div>
+        <button class = "button finishButton"><a href="index.html">Revise your cake</a></button>
     </div>
 
     <div>
@@ -96,16 +100,18 @@
         console.log("frosting choice: " + typeof frostingChoice);
         console.log("topping choice: " + typeof toppingChoice);
 
+        var cakeFlavor;
+
         if (cakeChoice == 1){
-            var cakeFlavor = document.getElementById('cake');
+            cakeFlavor = document.getElementById('cake');
             cakeFlavor.src = "img/vanilla_slice.png"
         }
         else if (cakeChoice == 2){
-            var cakeFlavor = document.getElementById('cake');
+            cakeFlavor = document.getElementById('cake');
             cakeFlavor.src = "img/chocolate_slice.png";
         }
         else if (cakeChoice == 3){
-            var cakeFlavor = document.getElementById('cake');
+            cakeFlavor = document.getElementById('cake');
             cakeFlavor.src = "img/strawberry_slice.png";
         }
 
@@ -113,54 +119,58 @@
             ctx.drawImage(cakeFlavor,10,10,500,500);
         })
 
+        var frosting;
+
         if (frostingChoice == 0){
-            var frosting = document.getElementById('frosting');
+            frosting = document.getElementById('frosting');
             frosting.src = "img/nothing.png"
         }
         if (frostingChoice == 1){
-            var frosting = document.getElementById('frosting');
-            frosting.src = "img/frosting1.png"
+            frosting = document.getElementById('frosting');
+            frosting.src = "img/frosting1_slice.png"
         }
         else if (frostingChoice == 2){
-            var frosting = document.getElementById('frosting');
-            frosting.src = "img/frosting2.png";
+            frosting = document.getElementById('frosting');
+            frosting.src = "img/frosting2_slice.png";
         }
         else if (frostingChoice == 3){
-            var frosting = document.getElementById('frosting');
-            frosting.src = "img/frosting3.png";
+            frosting = document.getElementById('frosting');
+            frosting.src = "img/frosting3_slice.png";
         }
 
         frosting.addEventListener("load", (e) => {
             ctx.drawImage(frosting,10,10,500,500);
         })
+        
+        var topping;
 
         console.log("asdfghjk");
 
         console.log(toppingChoice);
 
         if (toppingChoice == 0){
-            var topping = document.getElementById('topping');
+            topping = document.getElementById('topping');
             topping.src = "img/nothing.png";
         }
         else if (toppingChoice == 1){
-            var topping = document.getElementById('topping');
+            topping = document.getElementById('topping');
             topping.src = "img/topping1_slice.png";
         }
         else if (toppingChoice == 2){
             console.log("vgyujhbknlkm")
-            var topping = document.getElementById('topping');
+            topping = document.getElementById('topping');
             topping.src = "img/topping2_slice.png";
         }
         else if (toppingChoice == 3){
-            var topping = document.getElementById('topping');
+            topping = document.getElementById('topping');
             topping.src = "img/topping3_slice.png";
         }
         else if (toppingChoice == 4){
-            var topping = document.getElementById('topping');
+            topping = document.getElementById('topping');
             topping.src = "img/topping4_slice.png";
         }
         else if (toppingChoice == 5){
-            var topping = document.getElementById('topping');
+            topping = document.getElementById('topping');
             topping.src = "img/topping5_slice.png";
         }
 
