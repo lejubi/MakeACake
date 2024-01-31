@@ -47,15 +47,15 @@
             console.log("hi");
             console.log(email);
             var link = document.createElement('a');
-            console.log(link);
             // Convert canvas content to data URL
             link.href = canvas.toDataURL("image/png");
-            sendEmail(email);
+            console.log(link);
+            sendEmail(email, link.href);
         }
 
-        function sendEmail(emailinput) {
+        function sendEmail(emailinput, link) {
             console.log("send email button pushed")
-            window.location.href = "mailto:" + emailinput + "?subject=I%20made%20you%20a%20cake!";
+            window.open("mailto:" + emailinput + "?subject=I%20made%20you%20a%20cake! &body=" + link);
         }
 
     </script>
@@ -68,7 +68,7 @@
     </div>
 
     <div>
-        <button class = "button finishButton"><a href="index.html">Revise your cake</a></button>
+        <button class = "button finishButton"><a href="index.html">Remake your cake</a></button>
     </div>
 
     <div>
