@@ -11,9 +11,6 @@
     </head>
     <body style="background-image: url('img/bg1.png');">
         <h1>~ Make A Cake ~</h1>
-        
-        <script src="playSong.js"></script>
-        <button class = "button audioButton" onclick="playSong()"><img class = "audioIcon" src="img/audioIcon.png"></button>
 
         <!-- use the following lines for background music:
         <audio controls autoplay loop>
@@ -72,6 +69,9 @@
         <br>
 
         <button class = "button finishButton" onclick="finishSound.play()"><a href="outro.html">Finish --></a></button>
-
+        <script src="playSong.js"></script>
+        <div class="musicButton">
+            <button class = "button audioButton" onclick="playSong()"><img class = "audioIcon" src="img/audioIcon.png"></button>
+        </div>
     </body>
 </html>
