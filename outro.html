@@ -46,16 +46,12 @@
             const email = input.value;
             console.log("hi");
             console.log(email);
-            var link = document.createElement('a');
-            // Convert canvas content to data URL
-            link.href = canvas.toDataURL("image/png");
-            console.log(link);
-            sendEmail(email, link.href);
+            sendEmail(email);
         }
 
-        function sendEmail(emailinput, link) {
+        function sendEmail(emailinput) {
             console.log("send email button pushed")
-            window.open("mailto:" + emailinput + "?subject=I%20made%20you%20a%20cake! &body=" + link);
+            window.open("mailto:" + emailinput + "?subject=I%20made%20you%20a%20cake! &body=https://github.com/lejubi/MakeACake");
         }
 
     </script>
