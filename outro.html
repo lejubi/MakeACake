@@ -41,13 +41,17 @@
             const email = input.value;
             console.log("hi");
             console.log(email);
+            var link = document.createElement('a');
+            console.log(link);
+            // Convert canvas content to data URL
+            link.href = canvas.toDataURL("image/png");
             sendEmail(email);
         }
         function sendEmail(emailinput) {
             console.log("send email button pushed")
             // window.open("mailto:" + email + "?subject=I%20made%20you%20a%20cake!!&body=pretend%20theres%20a%20cake");
-            // window.open("mailto:" + email + "?subject=I%20made%20you%20a%20cake!!");
-            window.location.href = "mailto:" + emailinput + "?subject=I%20made%20you%20a%20cake!" + link;
+            window.open("mailto:" + email + "?subject=I%20made%20you%20a%20cake!!" + link);
+            //window.location.href = "mailto:" + emailinput + "?subject=I%20made%20you%20a%20cake!" + link;
         }
     </script>
 
@@ -223,13 +227,6 @@
             ctx.drawImage(topping,10,10,500,500);
         })
 
-        //var imgcanvas = document.getElementById("cakeSlice");
-        //var cakeImg = imgcanvas.toDataURL("image/png");
-        //document.write('<img src="'+cakeImge+'"/>')
-
-        //const pngDataUrl = c.toDataURL("image/png")
-        //console.log(pngDataUrl);
-        //canvasDownload.href = pngDataUrl;
 
     </script>
 
