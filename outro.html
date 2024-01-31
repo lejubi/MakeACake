@@ -13,10 +13,19 @@
         div {
             /* we could even change this according to the background they pick */
             /* background-color: white; */
-            opacity: 0.75;
             padding: 15px;
             margin: 30px;
             width: 400px;
+        }
+        .cakeCanvas {
+            padding: 0;
+            margin-left: 340px;
+            margin-top: -450px;
+            border: none;
+        }
+        body {
+            margin-left: 330px;
+            margin-top: 120px;
         }
     </style>
     <script src = "changebg.js" type = "text/javascript"></script>
@@ -24,21 +33,31 @@
 </head>
 <body id="body" style="background-color:#c5d6e6">
     <script type="text/javascript">
+
+        // CHANGING BACKGROUND
+
         bg--;
         changeBg();
+
+        // SENDING EMAIL
 
         function getEmail() {
             var input = document.getElementById("email");
             const email = input.value;
             console.log("hi");
             console.log(email);
-            sendEmail(email);
+            var link = document.createElement('a');
+            // Convert canvas content to data URL
+            link.href = canvas.toDataURL("image/png");
+            console.log(link);
+            sendEmail(email, link.href);
         }
-        function sendEmail(emailinput) {
-            // window.open("mailto:" + email + "?subject=I%20made%20you%20a%20cake!!&body=pretend%20theres%20a%20cake");
-            // window.open("mailto:" + email + "?subject=I%20made%20you%20a%20cake!!");
-            window.location.href = "mailto:" + emailinput + "?subject=I%20made%20you%20a%20cake!!";
+
+        function sendEmail(emailinput, link) {
+            console.log("send email button pushed")
+            window.open("mailto:" + emailinput + "?subject=I%20made%20you%20a%20cake! &body=" + link);
         }
+
     </script>
 
     <!-- placeholder items -->
@@ -53,7 +72,9 @@
     </div>
 
     <div>
-        <!-- TODO: get rid of the annoying blank space -->
+
+        <!-- SHARING CAKE HTML -->
+
         <h1>Share Your Cake!</h1>
         <h3>Share:</h3>
         <form autocomplete = "on" >
@@ -63,30 +84,38 @@
         </form>
 
         <h3>Download:</h3>
-        <!-- TODO: put final cake images instead of placeholder -->
-        <!-- <a href = "img/placeholder_cake.png" download = "cake">
-            <button type = "button"> Download </button>
-        </a> -->
+        <button type = "button" id="downloadBtn" onclick=downloadCanvas()> Download </button>
 
     </div>
 
-    <!-- i will get rid of border -->
-    <a id="canvasDownload" href = "#" download>Download Cake</a>
-
-    <canvas id="cakeSlice" width="500" height="500" style="border:1px solid grey"></canvas>
+    <div class="cakeCanvas">
+        <canvas id="cakeSlice" width="500" height="500"></canvas>
+    </div>
 
     <script type = "text/javascript"> 
-        // TODO: have to make index a js file?? perhaps too annoying
-        // TODO: move the giant cake
-        // TODO: move the canvas to the right of the text
 
+        var canvas = document.getElementById("cakeSlice");
+        
+        function downloadCanvas() {
+            console.log("download button pressed");
+            var link = document.createElement('a');
+            link.download = 'yourCake.png';
+            console.log(link);
+
+            link.href = canvas.toDataURL("image/png");
+            console.log(link);
+
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+        }
+    
         cakeChoice = localStorage.getItem("cakeChoice");
         frostingChoice = localStorage.getItem("frostingChoice");
         toppingChoice = localStorage.getItem("toppingChoice");
         
         const c = document.getElementById("cakeSlice");
         const ctx = c.getContext("2d");
-        const canvasDownload = document.getElementById("canvasDownload");
 
         console.log("cake choice: " + cakeChoice);
         console.log("frosting choice: " + frostingChoice);
@@ -115,10 +144,6 @@
             cakeFlavor.src = "img/strawberry_slice.png";
         }
 
-        cakeFlavor.addEventListener("load", (e) => {
-            ctx.drawImage(cakeFlavor,10,10,500,500);
-        })
-
         var frosting;
 
         if (frostingChoice == 0){
@@ -137,14 +162,8 @@
             frosting = document.getElementById('frosting');
             frosting.src = "img/frosting3_slice.png";
         }
-
-        frosting.addEventListener("load", (e) => {
-            ctx.drawImage(frosting,10,10,500,500);
-        })
         
         var topping;
-
-        console.log("asdfghjk");
 
         console.log(toppingChoice);
 
@@ -175,38 +194,12 @@
         }
 
         topping.addEventListener("load", (e) => {
+            ctx.drawImage(cakeFlavor,10,10,500,500);
+            ctx.drawImage(frosting,10,10,500,500);
             ctx.drawImage(topping,10,10,500,500);
         })
-
-        const pngDataUrl = c.toDataURL("image/png")
-        console.log(pngDataUrl);
-        canvasDownload.href = pngDataUrl;
 
     </script>
 
 </body>
 </html>
-
-<!--
-<form action=”mailto:contact@yourdomain.com”
-
-
-method=”POST”
-
-
-enctype=”text/plain”
-
-
-name=”EmailForm”>
-
-
-<label for="name">Name:</label><br>
-<input type="text" id="name" name="name"><br>
-
-
-<label for="ContactCommentt">Message:</label><br>
-<textarea id=”ContactCommentt” rows=”6″ cols=”20″>
-
-<input type="submit" value="Send">
-</form>
--->

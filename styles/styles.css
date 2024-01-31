@@ -5,12 +5,13 @@ a {
 
 * {
     font-family: 'Inconsolata', monospace;
-    background-size: cover;
+    background-size: 100vw, 100vh;
+    background-repeat: no-repeat;
 }
 
 .button {
     padding: 10px;
-    border: 2px solid white;
+    border: 3px solid white;
     font-size: 105%;
 }
 
@@ -19,21 +20,48 @@ a {
 }
 
 .finishButton:hover {
-    background-color: #3e8e41
+    background-color: rgb(222, 163, 185);
 }
 
 .finishButton:active {
-  background-color: #3e8e41;
-  box-shadow: 0 5px #666;
-  transform: translateY(4px);
+  background-color: rgb(222, 163, 185);
+  box-shadow: 5px 5px rgb(174, 147, 157);
+  transform: translate(-5px, -5px);
 }
 
 .changeBgButton {
     background-color: rgb(184, 189, 234);
 }
 
+.changeBgButton:hover {
+    background-color: rgb(152, 159, 213);
+}
+
+.changeBgButton:active {
+  background-color: rgb(152, 159, 213);
+  box-shadow: 5px 5px rgb(145, 149, 167);
+  transform: translate(-5px, -5px);
+}
+
+.audioButton {
+    background-color: rgb(184, 213, 234);
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+}
+
+.audioButton:hover {
+    background-color: rgb(151, 188, 214);
+}
+
+.audioButton:active {
+  background-color: rgb(151, 188, 214);
+  box-shadow: 5px 5px rgb(145, 159, 167);
+  transform: translate(-5px, -5px);
+}
+
 .title {
-    width: 200px;
+    width: 13.4vw;
 }
 
 .center {
@@ -48,14 +76,22 @@ a {
 
 h1 {
     padding: 10px;
-    border: 2px solid white;
+    border: 3px solid white;
     background-color: antiquewhite;
-    width: 243px;
+    width: 18vw;
 }
 
 body {
     margin-left: 380px;
-    margin-top: 120px;
+    margin-top: 88px;
+}
+
+.audioIcon {
+    height: 45px;
+    width: 45px;
+    margin: 0px;
+    position: initial;
+    display: flex;
 }
 
 img {
@@ -64,8 +100,6 @@ img {
     width: 400px;
     margin-top: -50px;
     margin-left: 380px;
-
-
 }
 
 .cake {
