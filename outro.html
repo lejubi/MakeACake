@@ -77,12 +77,12 @@
         <form autocomplete = "on" >
             <label for="email">Email: </label>
             <input type="text" name="email" id="email">
-            <button name="submit" class = "button purpleButton" id="submit" onclick = getEmail()>Share</button>
+            <button name="submit" class = "button purpleButton" id="submit" onclick = "clickOpSound.play(); getEmail()">Share</button>
         </form>
 
         <br>
         <br>
-        <button type = "button" class = "button greenButton" id="downloadBtn" onclick=downloadCanvas()> Download your cake</button>
+        <button type = "button" class = "button greenButton" id="downloadBtn" onclick="clickOpSound.play(); downloadCanvas();"> Download your cake</button>
 
     </div>
 
