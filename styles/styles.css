@@ -26,12 +26,11 @@ a {
 
 .greenButton:active {
   background-color: rgb(150, 207, 180);
-  box-shadow: 5px 5px rgb(74, 92, 84);
+  box-shadow: 5px 5px rgb(185, 187, 186);
   transform: translate(-5px, -5px);
 }
 
 .pinkButton {
-    margin-top: 300px;
     background-color: rgb(235, 192, 208);
 }
 
