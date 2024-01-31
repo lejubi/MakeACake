@@ -69,23 +69,24 @@
 
     <div>
         <script src = "changePage.js"></script>
-        <button class = "button finishButton" onclick="goToIndex()">Remake your cake</button>
+        <button class = "button pinkButton" onclick="goToIndex()">Remake your cake</button>
     </div>
 
     <div>
 
         <!-- SHARING CAKE HTML -->
 
-        <h1>Share This Game!</h1>
-        <h3>Share:</h3>
+        <h1 class = "saveYourCake">Save Your Cake!</h1>
+        <h3>Share this game:</h3>
         <form autocomplete = "on" >
             <label for="email">Email: </label>
             <input type="text" name="email" id="email">
-            <button name="submit" id="submit" onclick = getEmail()>Share</button>
+            <button name="submit" class = "button purpleButton" id="submit" onclick = getEmail()>Share</button>
         </form>
 
-        <h3>Download:</h3>
-        <button type = "button" id="downloadBtn" onclick=downloadCanvas()> Download </button>
+        <br>
+        <br>
+        <button type = "button" class = "button greenButton" id="downloadBtn" onclick=downloadCanvas()> Download your cake</button>
 
     </div>
 

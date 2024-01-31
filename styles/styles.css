@@ -15,33 +15,52 @@ a {
     font-size: 105%;
 }
 
-.finishButton {
+.greenButton {
+    margin-top: -15px;
+    background-color: rgb(175, 222, 200);
+}
+
+.greenButton:hover {
+    background-color: rgb(150, 207, 180);
+}
+
+.greenButton:active {
+  background-color: rgb(150, 207, 180);
+  box-shadow: 5px 5px rgb(74, 92, 84);
+  transform: translate(-5px, -5px);
+}
+
+.pinkButton {
     margin-top: -15px;
     background-color: rgb(235, 192, 208);
 }
 
-.finishButton:hover {
+.pinkButton:hover {
     background-color: rgb(222, 163, 185);
 }
 
-.finishButton:active {
+.pinkButton:active {
   background-color: rgb(222, 163, 185);
   box-shadow: 5px 5px rgb(174, 147, 157);
   transform: translate(-5px, -5px);
 }
 
-.changeBgButton {
+.purpleButton {
     background-color: rgb(184, 189, 234);
 }
 
-.changeBgButton:hover {
+.purpleButton:hover {
     background-color: rgb(152, 159, 213);
 }
 
-.changeBgButton:active {
+.purpleButton:active {
   background-color: rgb(152, 159, 213);
   box-shadow: 5px 5px rgb(145, 149, 167);
   transform: translate(-5px, -5px);
+}
+
+.saveYourCake {
+    width: 16.5vw;
 }
 
 .audioButton {
