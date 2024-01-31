@@ -46,12 +46,16 @@
             const email = input.value;
             console.log("hi");
             console.log(email);
+            var link = document.createElement('a');
+            console.log(link);
+            // Convert canvas content to data URL
+            link.href = canvas.toDataURL("image/png");
             sendEmail(email);
         }
 
         function sendEmail(emailinput) {
             console.log("send email button pushed")
-            window.location.href = "mailto:" + emailinput + "?subject=I%20made%20you%20a%20cake!?body=";
+            window.location.href = "mailto:" + emailinput + "?subject=I%20made%20you%20a%20cake!";
         }
 
     </script>
