@@ -15,6 +15,21 @@ a {
     font-size: 105%;
 }
 
+.greenButton {
+    margin-top: -15px;
+    background-color: rgb(175, 222, 200);
+}
+
+.greenButton:hover {
+    background-color: rgb(150, 207, 180);
+}
+
+.greenButton:active {
+  background-color: rgb(150, 207, 180);
+  box-shadow: 5px 5px rgb(74, 92, 84);
+  transform: translate(-5px, -5px);
+}
+
 .pinkButton {
     margin-top: -15px;
     background-color: rgb(235, 192, 208);
