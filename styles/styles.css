@@ -147,7 +147,7 @@ img {
     padding: 0;
     margin: 0;
     margin-left: 775px;
-    margin-top: -60px;
+    margin-top: -55px;
 }
 .audioIcon {
     margin-left: 7px;
@@ -171,4 +171,8 @@ img {
     height: 300px;
     margin-top: 1px;
     margin-left: 140px;
+}
+.finishButton {
+    margin-top: 0px;
+    background-color: rgb(235, 192, 208);
 }
